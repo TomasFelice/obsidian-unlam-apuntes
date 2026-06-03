@@ -41,3 +41,6 @@ Para el parcial
 ![[Pasted image 20260602213112.png]]
 ![[Pasted image 20260602213544.png]]
 ![[Pasted image 20260602214905.png]]
+![[Pasted image 20260602215953.png]]
+![[Pasted image 20260602220528.png]]
+![[Pasted image 20260602221538.png]]

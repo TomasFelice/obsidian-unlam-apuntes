@@ -174,13 +174,25 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "bff56e93b6b4be0a",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Auditoría y legislación/Clases/AL - Clase 7.md"
+              },
+              "icon": "lucide-info",
+              "title": "Propiedades de los archivos para AL - Clase 7"
+            }
           }
         ],
         "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 204.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,6 +208,10 @@
   },
   "active": "ece610defc43ee18",
   "lastOpenFiles": [
+    "Pasted image 20260602221819.png",
+    "Pasted image 20260602221538.png",
+    "Pasted image 20260602220528.png",
+    "Pasted image 20260602215953.png",
     "Pasted image 20260602214905.png",
     "Auditoría y legislación/Clases/AL - Clase 7.md",
     "Pasted image 20260602213544.png",
@@ -204,10 +220,6 @@
     "Pasted image 20260602211412.png",
     "Pasted image 20260602211121.png",
     "Pasted image 20260602202849.png",
-    "Pasted image 20260602202825.png",
-    "Pasted image 20260602202814.png",
-    "Pasted image 20260602201925.png",
-    "Pasted image 20260602201518.png",
     "Auditoría y legislación/Clases/AL - Clase 6.md",
     "Arquitectura de sistemas software/Clases/AS - Clase 9.md",
     "Arquitectura de sistemas software/Clases/AS - Clase 8.md",
