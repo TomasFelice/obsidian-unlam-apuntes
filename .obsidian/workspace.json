@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Auditoría y legislación/Clases/AL - Clase 7.md",
+                "file": "Programación concurrente/Clases/PC - Clase 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AL - Clase 7"
+              "title": "PC - Clase 9"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "79403122860afcee",
@@ -192,7 +191,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,22 +207,30 @@
   },
   "active": "ece610defc43ee18",
   "lastOpenFiles": [
-    "Pasted image 20260602221819.png",
-    "Pasted image 20260602221538.png",
-    "Pasted image 20260602220528.png",
-    "Pasted image 20260602215953.png",
-    "Pasted image 20260602214905.png",
+    "Auditoría y legislación/Clases/AL - Clase 10.md",
+    "Pasted image 20260623223741.png",
+    "Pasted image 20260623223144.png",
+    "Pasted image 20260623223018.png",
+    "Pasted image 20260623222313.png",
+    "Pasted image 20260623221428.png",
+    "Pasted image 20260623214017.png",
+    "Pasted image 20260623213906.png",
+    "Pasted image 20260623213550.png",
+    "Pasted image 20260623213527.png",
+    "Pasted image 20260623213124.png",
+    "Auditoría y legislación/Clases/AL - Clase 9.md",
+    "Programación concurrente/Clases/PC - Parcial 1.md",
+    "Programación concurrente/Preguntas Concurrente.pdf",
+    "Programación concurrente/Clases/PC - Clase 12.md",
+    "Programación concurrente/Clases/PC - Clase 11.md",
+    "Auditoría y legislación/Clases/AL - Clase 8.md",
+    "Programación concurrente/Clases/PC - Clase 9.md",
+    "Programación concurrente/Clases/PC - Clase 10.md",
     "Auditoría y legislación/Clases/AL - Clase 7.md",
-    "Pasted image 20260602213544.png",
-    "Pasted image 20260602213112.png",
-    "Pasted image 20260602212701.png",
-    "Pasted image 20260602211412.png",
-    "Pasted image 20260602211121.png",
-    "Pasted image 20260602202849.png",
+    "Programación concurrente/Clases/PC - Clase 8.md",
     "Auditoría y legislación/Clases/AL - Clase 6.md",
     "Arquitectura de sistemas software/Clases/AS - Clase 9.md",
     "Arquitectura de sistemas software/Clases/AS - Clase 8.md",
-    "Programación concurrente/Clases/PC - Clase 8.md",
     "Programación concurrente/Clases/PC - Clase 7.md",
     "Programación concurrente/Clases/PC - Clase 6(1).md",
     "Auditoría y legislación/Clases/AL - Clase 5.md",
@@ -244,15 +251,6 @@
     "Taller de integracion",
     "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
     "Sistemas Operativos Avanzados/Clases",
-    "Sistemas Operativos Avanzados",
-    "Sistemas operativos/Sistemas operativos.md",
-    "Sistemas operativos/Clases",
-    "Sistemas de Numeración/Sistemas de Numeración.md",
-    "Seguridad de la información/Seguridad de la información.md",
-    "Seguridad aplicada y forensia/Seguridad aplicada y forensia.md",
-    "Responsabilidad social universitaria/Responsabilidad social universitaria.md",
-    "Requisitos Avanzados/Requisitos Avanzados.md",
-    "Redes de computadoras/Redes de computadoras.md",
-    "Proyecto final de carrera/Proyecto final de carrera.md"
+    "Sistemas Operativos Avanzados"
   ]
 }
