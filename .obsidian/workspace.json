@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programación concurrente/Clases/PC - Clase 9.md",
+                "file": "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PC - Clase 9"
+              "title": "SOA - Clase 1"
             }
           }
         ]
@@ -207,6 +207,10 @@
   },
   "active": "ece610defc43ee18",
   "lastOpenFiles": [
+    "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
+    "Programación concurrente/Programación concurrente.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+    "Programación concurrente/Clases/PC - Clase 9.md",
     "Auditoría y legislación/Clases/AL - Clase 10.md",
     "Pasted image 20260623223741.png",
     "Pasted image 20260623223144.png",
@@ -224,7 +228,6 @@
     "Programación concurrente/Clases/PC - Clase 12.md",
     "Programación concurrente/Clases/PC - Clase 11.md",
     "Auditoría y legislación/Clases/AL - Clase 8.md",
-    "Programación concurrente/Clases/PC - Clase 9.md",
     "Programación concurrente/Clases/PC - Clase 10.md",
     "Auditoría y legislación/Clases/AL - Clase 7.md",
     "Programación concurrente/Clases/PC - Clase 8.md",
@@ -246,10 +249,8 @@
     "Templates/Examen.md",
     "Templates/Clase.md",
     "Templates",
-    "Taller de integracion/Taller de integracion.md",
     "Taller de integracion/Clases",
     "Taller de integracion",
-    "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
     "Sistemas Operativos Avanzados/Clases",
     "Sistemas Operativos Avanzados"
   ]
