@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -205,11 +207,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ece610defc43ee18",
+  "active": "44772a0d0d893640",
   "lastOpenFiles": [
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+    "conflict-files-obsidian-git.md",
+    "OpenMP-MPI.pdf",
+    "OpenMP-MPI 1.pdf",
+    "GPU Clase3 Memoria - Plickers.pdf",
+    "GPU Clase3 Memoria - Plickers 1.pdf",
+    "GPU Clase 4.pdf",
+    "GPU Clase 4 1.pdf",
+    "GPU Clase 2 - Plickers.pdf",
+    "GPU Clase 2 - Plickers 1.pdf",
+    "GPU Clase 1 - Plickers.pdf",
+    "GPU Clase 1 - Plickers 1.pdf",
     "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
     "Programación concurrente/Programación concurrente.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
     "Programación concurrente/Clases/PC - Clase 9.md",
     "Auditoría y legislación/Clases/AL - Clase 10.md",
     "Pasted image 20260623223741.png",
@@ -224,7 +237,6 @@
     "Pasted image 20260623213124.png",
     "Auditoría y legislación/Clases/AL - Clase 9.md",
     "Programación concurrente/Clases/PC - Parcial 1.md",
-    "Programación concurrente/Preguntas Concurrente.pdf",
     "Programación concurrente/Clases/PC - Clase 12.md",
     "Programación concurrente/Clases/PC - Clase 11.md",
     "Auditoría y legislación/Clases/AL - Clase 8.md",
@@ -241,17 +253,7 @@
     "Plan de Estudios.md",
     "Examen.md",
     "Virtualización de Hardware/Virtualización de Hardware.md",
-    "Virtualización de Hardware/Clases",
-    "Virtualización de Hardware",
     "Tópicos de programación/Tópicos de programación.md",
-    "Tópicos de programación/Clases",
-    "Tópicos de programación",
-    "Templates/Examen.md",
-    "Templates/Clase.md",
-    "Templates",
-    "Taller de integracion/Clases",
-    "Taller de integracion",
-    "Sistemas Operativos Avanzados/Clases",
-    "Sistemas Operativos Avanzados"
+    "Templates/Examen.md"
   ]
 }
