@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SOA - Clase 1"
+              "title": "GADS - Clase 1"
             }
           }
         ]
@@ -193,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,9 +207,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "44772a0d0d893640",
+  "active": "ece610defc43ee18",
   "lastOpenFiles": [
+    "Pasted image 20260820201832.png",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 1.md",
     "conflict-files-obsidian-git.md",
     "OpenMP-MPI.pdf",
     "OpenMP-MPI 1.pdf",
@@ -252,8 +254,6 @@
     "Bienvenido.md",
     "Plan de Estudios.md",
     "Examen.md",
-    "Virtualización de Hardware/Virtualización de Hardware.md",
-    "Tópicos de programación/Tópicos de programación.md",
-    "Templates/Examen.md"
+    "Virtualización de Hardware/Virtualización de Hardware.md"
   ]
 }
