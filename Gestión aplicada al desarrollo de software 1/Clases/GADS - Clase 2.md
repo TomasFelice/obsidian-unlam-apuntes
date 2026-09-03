@@ -4,6 +4,7 @@ fecha: 2026-08-20
 tema: Introduccion
 ---
 # Modelos de Ciclo de Vida y Modelos de Negocio
+# Modelos de Ciclo de Vida y Modelos de Negocio
 
 ## Idea central de la clase
 
