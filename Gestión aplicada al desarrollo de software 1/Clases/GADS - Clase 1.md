@@ -4,6 +4,7 @@ fecha: 2026-08-20
 tema: Introduccion
 ---
 > Parciales a desarrollar. Prestar atencion a los ejemplos de preguntas que suelen dar. Se suelen repetir en los parciales.
+> Parciales a desarrollar. Prestar atencion a los ejemplos de preguntas que suelen dar. Se suelen repetir en los parciales.
 
 ---
 # Gestion Aplicada al Desarrollo de Software
