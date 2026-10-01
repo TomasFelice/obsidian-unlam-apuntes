@@ -4,7 +4,6 @@ fecha: 2026-08-20
 tema: Introduccion
 ---
 # Modelos de Ciclo de Vida y Modelos de Negocio
-# Modelos de Ciclo de Vida y Modelos de Negocio
 
 ## Idea central de la clase
 
@@ -153,6 +152,8 @@ Se entiende **todo el problema al inicio**, pero se decide dividirlo en partes.
 El sistema completo se descompone antes de comenzar en un número conocido de incrementos.
 
 Cada incremento ejecuta una unidad mínima de proceso completa.
+
+Entra el concepto de **MVP**. Cada incremento debe aportar valor.
 
 ### Flujo conceptual
 

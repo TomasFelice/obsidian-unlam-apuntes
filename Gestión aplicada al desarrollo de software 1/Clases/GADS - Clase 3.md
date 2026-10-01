@@ -4,6 +4,7 @@ fecha: 2026-08-20
 tema: Marketing Digital
 ---
 # Marketing Digital
+# Marketing Digital
 > Lo que solemos pensar los ing, es retrasar la venta del producto. Asumimos que si no se vende el producto es porque "le falta algo". Entonces que hacemos? Otro producto. => MAL. FACTURACION 0.
 
 En mkt no se busca:
