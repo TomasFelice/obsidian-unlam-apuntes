@@ -8,20 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ce2f920d659b9cce",
+            "id": "bcfef713574273bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Parcial 1.md",
+                "file": "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GADS - Parcial 1"
+              "title": "SOA - Clase 9"
+            }
+          },
+          {
+            "id": "17a702cbf62831d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 7.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GADS - Clase 7"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,39 +220,48 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "ce2f920d659b9cce",
+  "active": "17a702cbf62831d4",
   "lastOpenFiles": [
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
+    "Pasted image 20261027200627.png",
+    "Pasted image 20261027200607.png",
+    "Pasted image 20261027200555.png",
+    "Pasted image 20261027200538.png",
+    "Pasted image 20261027200521.png",
+    "Pasted image 20261027200505.png",
+    "Pasted image 20261027200410.png",
+    "Pasted image 20261027200317.png",
+    "Pasted image 20261027200047.png",
+    "Pasted image 20261027195904.png",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 7.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
+    "Autómatas y gramática/Clases/AG - Clase 8.md",
+    "Autómatas y gramática/Clases/AG - Clase 7.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 7.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 6.md",
+    "Autómatas y gramática/Clases/AG - Clase 6.md",
+    "Excalidraw/Drawing 2026-10-09 21.23.04.excalidraw.md",
+    "Excalidraw",
+    "Autómatas y gramática/Clases/AG - Clase 5.md",
+    "Sin título.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 5.md",
+    "Autómatas y gramática/Clases/AG - Clase 4.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Parcial 1.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 1.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 2.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
-    "Pasted image 20260929211932.png",
-    "Pasted image 20260929211826.png",
-    "Pasted image 20260929210745.png",
-    "Pasted image 20260929210525.png",
-    "Pasted image 20260929210516.png",
-    "Pasted image 20260929210509.png",
-    "Pasted image 20260929205923.png",
-    "Pasted image 20260929205717.png",
-    "Pasted image 20260929205602.png",
-    "Pasted image 20260929204705.png",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 4.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 3.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
     "Autómatas y gramática/Clases/AG - Repaso Parcial 1.md",
-    "Autómatas y gramática/Clases/AG - Clase 4.md",
     "Autómatas y gramática/Clases/AG - Clase 3.md",
     "Autómatas y gramática/Clases/AG - Clase 2.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md",
-    "Autómatas y gramática/Clases/AG - Clase 1.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
-    "conflict-files-obsidian-git.md",
     "OpenMP-MPI.pdf",
     "OpenMP-MPI 1.pdf",
     "GPU Clase3 Memoria - Plickers.pdf",
@@ -246,15 +270,6 @@
     "GPU Clase 4 1.pdf",
     "GPU Clase 2 - Plickers.pdf",
     "GPU Clase 2 - Plickers 1.pdf",
-    "GPU Clase 1 - Plickers.pdf",
-    "GPU Clase 1 - Plickers 1.pdf",
-    "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
-    "Programación concurrente/Programación concurrente.md",
-    "Programación concurrente/Clases/PC - Clase 9.md",
-    "Auditoría y legislación/Clases/AL - Clase 10.md",
-    "Auditoría y legislación/Clases/AL - Clase 9.md",
-    "Programación concurrente/Clases/PC - Parcial 1.md",
-    "Programación concurrente/Clases/PC - Clase 12.md",
-    "Programación concurrente/Clases/PC - Clase 11.md"
+    "GPU Clase 1 - Plickers.pdf"
   ]
 }
