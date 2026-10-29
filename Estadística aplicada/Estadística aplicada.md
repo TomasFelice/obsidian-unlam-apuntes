@@ -21,3 +21,17 @@ if (pages.length === 0) {
   );
 }
 ```
+
+## Guía de estudio de los apuntes
+
+Revisión del texto y ampliaciones: 29/10/2026. Detalle de alcance y pendientes en [[Revisión integral de apuntes]].
+
+- Fijar soporte y parametrización antes de calcular.
+- Distinguir verosimilitud, prior, posterior, media y MAP.
+- Usar Clase 3 como versión completa; revisar la prior truncada del ejemplo exponencial.
+
+### Recorrido por las notas
+
+- [[Estadística aplicada/Clases/Clase 3|Clase 3]] — Inferencia bayesiana: modelo geométrico y proceso de Poisson
+- [[Estadística aplicada/Clases/Clase 3(1)|Clase 3(1)]] — Inferencia bayesiana: modelo geométrico y proceso de Poisson
+- [[Estadística aplicada/Clases/Clase 4|Clase 4]] — Inferencia bayesiana: modelo geométrico y proceso de Poisson

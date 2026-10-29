@@ -1,8 +1,12 @@
 ---
 tipo: clase
-fecha: 2026-06-09
-tema: Compliance
+fecha: 2026-06-16
+tema: "Compliance, auditoría de sistemas y evidencia de auditoría"
+fecha_original: 2026-06-09
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
+
 ![[Pasted image 20260616201725.png]]
 ![[Pasted image 20260616201748.png]]
 ![[Pasted image 20260616201825.png]]
@@ -12,7 +16,9 @@ tema: Compliance
 ![[Pasted image 20260616202952.png]]
 
 ---
-# Auditoria de sistemas de legislacion
+
+# Auditoría de sistemas de legislación
+
 ![[Pasted image 20260616203526.png]]
 ![[Pasted image 20260616203658.png]]
 ![[Pasted image 20260616203706.png]]
@@ -41,7 +47,9 @@ tema: Compliance
 ![[Pasted image 20260616205733.png]]
 
 ---
-# Evidencia de autidoria
+
+# Evidencia de auditoría
+
 ![[Pasted image 20260616210055.png]]
 ![[Pasted image 20260616210212.png]]
 ![[Pasted image 20260616210252.png]]
@@ -56,4 +64,18 @@ tema: Compliance
 > Vamos a auditar PCs de windows. Auditamos la seguridad
 > evidencia documental principalmente (capturas, etc)
 > evidencia testimonial (uno hace de auditor y otro de auditado)
-> 
+>
+
+---
+
+## Complemento de estudio
+
+### Del cumplimiento al hallazgo
+
+Compliance busca cumplir obligaciones aplicables y compromisos asumidos. Una auditoría contrasta evidencia con criterios previamente definidos; no equivale simplemente a intentar vulnerar sistemas.
+
+Para el TP, documentar **criterio → prueba → evidencia → hallazgo → recomendación**. Ejemplo: comprobar si una cuenta exige autenticación según la política definida; registrar configuración y fecha sin exponer credenciales.
+
+La evidencia documental y testimonial puede complementarse: una entrevista explica el proceso, pero no demuestra por sí sola que un control opere. Cada hallazgo debe indicar qué se observó, qué criterio incumple y qué efecto tiene. Diferenciar un control inexistente de uno que no pudo verificarse.
+
+**Repaso:** formular un hallazgo concreto y una recomendación que permita verificar posteriormente la mejora.

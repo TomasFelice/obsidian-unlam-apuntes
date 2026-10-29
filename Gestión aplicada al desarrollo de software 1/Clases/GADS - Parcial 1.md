@@ -1,48 +1,62 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema:
+tema: "Repaso: negocio, visión y ciclo de vida"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
-# Repaso parcial 1
-## Preguntas de parcial
 
-1. Que es un modelo de negocio?
-Un modelo de negocio es la forma en la que se comercializa determinado producto/servicio. Es la forma en la que una empresa crea, entrega y captura valor a traves de sus productos/servicios.
-Un modelo de negocio incluye:
-- A quien le vende (mercado objetivo)
-- Que ofrece (propuesta de valor)
-- Como gana dinero (ventas, publiciddad, suscripciones, etc)
-- Como hace llegar el producto (canales de distribucion)
-- Que necesita para funcionar (recursos y actividades)
-- Cuanto le cuesta (costos)
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
 
-2. Que es un modelo de negocio freemium?
-Un modelo freemium es aquel en el cual su uso es gratis, pero tiene secciones/funcionalidades de pago. Se ofrece una parte del producto/servicio gratuitamente, y para funcionalidades extra, se cobra. Ejemplo: Spotify.
+# Repaso del primer parcial
 
-3. Que es un modelo de negocio por suscripcion?
-Un modelo por suscripcion es aquel en el cual se le cobra al usuario cierto monto de forma recurrente para poder utilizar el producto/servicio. Este cobro suele ser de manera mensual o anual. Ejemplo: Netflix
+## 1. ¿Qué es un modelo de negocio?
 
-4. Que es un documento de vision?
-Es un documento en el cual se detalla la perspectiva del negocio, con que fin hacen lo que hacen, hacia donde van. Define la **direccion y proposito** de un proyecto, producto o empresa a **largo plazo**. Es una guia para el equipo y las partes interesadas, alineando esfuerzos hacia una meta comun
+Describe cómo una organización crea, entrega y captura valor. Incluye público objetivo, propuesta, canales, recursos, actividades, ingresos y costos. No se limita a la forma de cobrar.
 
-5. Para que sirve un documento de vision?
-- Proporciona una guia clara
-- Alineacion del equipo
-- Facilita decisiones
-- Define prioridades
-- Mejora la comunicacion
+## 2. ¿Qué es freemium?
 
-6. Que es un modelo de ciclo de vida?
-Un MCV es cual define como se van a organizar las actividades y que actividades se van a realizar para llevar a cabo determinado producto software.
-Es un **marco estructurado** que guia la evolucion del producto software, desde su concepcion hasta su retiro, incluyendo fases como:
-- Planificacion
-- Disenio
-- Implementacion
-- Pruebas
-- Despliegue
-- Mantenieminto
+Ofrece una parte del producto o servicio gratuitamente y cobra por funciones, capacidad o beneficios adicionales. Debe distinguirse de una prueba gratuita por tiempo limitado.
 
-7. Que define un ciclo de vida?
-Dfine la estructura y el enfoque que se tomara para desarrolar el producto software. Indica cuantas actividades hay (analisis, disenio, implementacion, pruebas), como se relacionan (secuencial, iterativo, incremental, agil) y como se organiza el desarrollo y entregas.
-8. Que es una unidad minima de proceso?
-E
+**Ejemplo propuesto:** CRM con contactos gratuitos y automatizaciones pagas.
+
+## 3. ¿Qué es un modelo por suscripción?
+
+El cliente paga periódicamente por acceso o servicio, por ejemplo mensual o anual. Puede coexistir con freemium, cobro por uso y otros mecanismos. No garantiza por sí solo permanencia de clientes.
+
+## 4. ¿Qué es un documento de visión?
+
+Expresa el problema u oportunidad, los destinatarios, los objetivos y la propuesta de valor de un producto o proyecto. Puede delimitar alcance de alto nivel, restricciones y criterios de éxito. Distinguirlo de la visión general de una empresa.
+
+## 5. ¿Para qué sirve?
+
+Alinea expectativas, orienta decisiones, ayuda a priorizar y ofrece una referencia común. Ejemplo: aclarar si un CRM busca mejorar seguimiento comercial o administrar facturación evita que cada integrante construya un producto diferente.
+
+## 6. ¿Qué es un modelo de ciclo de vida?
+
+Es una representación de cómo evoluciona el software desde su concepción hasta su retiro, incluyendo relaciones entre etapas y entregas. Un modelo de proceso detalla actividades; ambos conceptos están relacionados, pero no son idénticos.
+
+En la clasificación de la cátedra se distinguen convencional, incremental y evolutivo. Consultar [[GADS - Clase 2]] para el criterio de elección y las convenciones de esa clasificación.
+
+## 7. ¿Qué define un ciclo de vida?
+
+Organiza la evolución del producto, las etapas, sus relaciones y los momentos de validación y entrega. No necesariamente fija el detalle de todas las tareas ni su cantidad exacta.
+
+En clase se contrapone entrega conjunta, incrementos planificados y evolución por aprendizaje. Un desarrollo real puede combinar iteración, incremento y planificación.
+
+## 8. ¿Qué es una unidad mínima de proceso?
+
+En la terminología de clase, es el conjunto básico de actividades para construir una parte del software: análisis, diseño, construcción, pruebas y gestión. Puede repetirse según el modelo de desarrollo.
+
+**Ejemplo:** para agregar seguimiento de oportunidades al CRM, comprender la necesidad, diseñar la solución, implementarla, comprobarla y gestionar su realización. Hacer solo código no completa esa unidad.
+
+## Complemento: preguntas para practicar
+
+- ¿Por qué SaaS y suscripción no son sinónimos?
+- ¿Qué diferencia hay entre entregar incrementos y refinar iterativamente algo existente?
+- ¿Cómo se valida una estimación? Ver [[GADS - Clase 5]].
+- ¿Cómo se distinguen esfuerzo, duración y camino crítico? Ver [[GADS - Clase 6]].
+- ¿Cómo se formula y gestiona un riesgo? Ver [[GADS - Clase 7]].
+
+Estas son respuestas revisadas y preguntas de práctica; no se presentan como una transcripción del examen ni como garantía de los temas que se evaluarán.

@@ -1,81 +1,50 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Modelos de procesos
+tema: "Estimación de proyectos e indicadores de producto y proceso"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
-# Estimacion de proyectos
-**De forma tradicional**
-A + D -> 30%
-Desarrollo -> 40%
-Pruebas -> 20%
-Gestion -> 10%
-> Ahora no se hace mas asi
 
-esto y la ERS era input a la hora de esti,ar.
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
 
-A la hora de estimar el costo, debiamos estimar las LDC. Se usa una tecnica
+# Estimación e indicadores
 
-ERS -> Tecnica (puntos de funcion x ej) -> Tamanio (LDC) -> COCOMO -> hs
+## Estimar trabajo y costo
 
-Hay que buscar un equilibrio entre las personas asignadas y la productividad que genera cad auno
+La clase contrapone un reparto tradicional —análisis/diseño 30 %, desarrollo 40 %, pruebas 20 % y gestión 10 %— con otro esquema de 10 % para pensar, 80 % para ejecutar actividades combinadas y 10 % para revisar e iterar. Son simplificaciones didácticas, **no porcentajes universales** ni evidencia de que un enfoque haya reemplazado todos los demás.
 
-Hacer un roadmap
-Tomar acciones correctivas para que los desvios sean minimizados
+La estimación debe declarar alcance, supuestos, datos, incertidumbre y unidad. Líneas de código y puntos de función son medidas distintas de tamaño; no hay una conversión universal entre ellas.
 
----
-> Ahora se hace...
+COCOMO es una familia de modelos paramétricos que usa tamaño y otros factores para estimar esfuerzo y cronograma. Su esfuerzo suele expresarse en persona-mes; convertir a horas exige fijar una convención. No produce simplemente «horas» por ingresar líneas de código.
 
-*Cranear* -> 10 %
-Desarrollo / Test / Analisis / Disenio -> 80 %
-*Ver output e iterar* -> 10 %
+Fuente: [SEI: estimación de costos](https://www.sei.cmu.edu/blog/software-cost-estimation-explained/).
 
-> No hacer sw por hacer. Pensar en el usuario objetivo y ver que necesita
+## Medir producto y proceso
 
-Ahora se usan **INDICADORES**. Muestran en nros, la situcion de determinada cosa.
-Hay que medir variables del producto y, mas importante aun, del proceso sw.
-Hay que medir y entender el "aja moment". Es el momento en el cual el usuario entiende el valor de nuestro sw y como usarlo.
-No puedo basarme en sensaciones, sino que es necesario medirlo.
-Suele haber una barrera en migraciones de sistemas. Muchas veces los usuarios eligen quedarse en lo viejo porque ya lo conocen .
+Los indicadores permiten contrastar el plan con resultados. Medir producto no reemplaza medir proceso. Registrar también trabajo pendiente, tiempo de entrega, retrabajo y defectos según el objetivo del proyecto.
 
----
-# Indicadores
-> Metricas que deberiamos conocer
-> Cercanas a los usuarios
+El **aha moment** es el momento en que un usuario percibe valor. Debe formularse como una hipótesis contrastable, por ejemplo completar un primer seguimiento de oportunidad, sin asumir que coincide con registrarse.
 
-### Activacion
-Determinar la accion clave de nuestro sw sobre usuarios registrados.
-En PedidosYa, podria ser la concretacion de un pedido, el pago de un pedido, etc.
-Se suele identificar una sola. Pero podria medirse mas de una.
-### Retencion
-D1 -> Me fijo al dia siguiente cuantos **volvieron a entrar**
-D7 -> Me fijo a los 7 dias
-D30 -> Me fijo a los 30 dias
-### Stickyness (apego)
-Si tenes N usuarios activos mensuales. Pero al dia, cuantos de esos, se conectaron?
-Te tenes que preguntar como aumentarlo
-Por ejemplo, las rachas de TikTok/Duolingo, te obligan a volver
-### MRR (facturacion mensual)
-Si vos no haces NADA, el mes siguiente, cuanto facturarias?
-Lo podes predecir por el historico de ventas
-Para inversores, es importante verlo anualizado.
-### CAC
-Costo de adquisicion del cliente 
-Lo uso para cmpararlo contra cuanto me va a generar cada cliente (LTV).
-### NSM (North Star Metric)
-Definir una unica metrica en todo el area/empresa/negocio que me indique si el negoicio esta o no creciendo.
-Con ella puedo predecir con X cantidad de tiempo la evolucion de mi negocio.
-Necesito que la NSM vaya bien.
-Tengo que definir el "Circulo de control". Tengo que determinar hasta deonde es el alcance de lo que tengo control.
+## Métricas de producto
 
-Para que sirve la NSM?
-- Para indicar si el negocio esta o no creciendo
-Que caracteristicas tiene?
+| Indicador | Definición operativa |
+|---|---|
+| Activación | Usuarios que completan una acción clave / usuarios elegibles |
+| Retención D1, D7, D30 | Proporción de una cohorte que vuelve o cumple la acción definida en esa ventana |
+| Stickiness | DAU/MAU, usando una definición consistente de usuario activo |
+| MRR | Ingreso recurrente mensual normalizado de suscripciones |
+| ARR | 12 × MRR bajo la convención de anualización |
+| CAC | Costos de adquisición / clientes nuevos atribuibles |
+| LTV | Valor estimado del cliente durante su relación, con supuestos explícitos |
 
+MRR no equivale a toda la facturación del mes ni a una promesa de cobro futuro. Declarar qué pagos, descuentos y cambios de plan se incluyen. Fuente: [Stripe: MRR](https://stripe.com/gb/resources/more/what-is-monthly-recurring-revenue).
 
+## North Star Metric y complemento
 
+La NSM busca representar valor entregado al usuario y orientar decisiones. No basta con que aumente ni permite predecir automáticamente el negocio. Definir indicadores auxiliares y límites para evitar mejorarla a costa de calidad o sostenibilidad.
 
----
-# Repaso
-1. Forma tradicional de contar horas de gestion. Proceso estandarizado de multiples capas
-2. Forma nueva de estimar
-3. Indicadores
+Ejemplo para el CRM: oportunidades con seguimiento útil completado por semana. Validar si se relaciona con el valor buscado; registrar cómo se cuenta y qué queda fuera. El círculo de control ayuda a distinguir resultados sobre los que el equipo actúa directamente de factores externos.
+
+**Repaso:** definir cohorte y acción antes de calcular retención. Si 20 de 100 usuarios regresan en D7 según esa regla, la retención D7 es 20 %.

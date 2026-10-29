@@ -1,74 +1,60 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Gestion de Riesgos
+tema: "Gestión de riesgos: identificación, priorización y respuestas"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
-# Gestion de Riesgos
-> Es un **potencial** problema. No es ni un problema, ni un dato
 
-Ejemplo:
-- "Se cayeron el 6% de las ventas" -> dato
-- "Se cayo el servidor" -> problema
-- "No tener un cashflow adecuado producto del mal funcionamiento del ecommerce" -> riesgo
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
 
-## Estructura CEC
-> Permite definir el riesgo
+# Gestión de riesgos
 
-A partir de C (causa), puede ser que E (evnto), y a partir de ahu tengo una C (consecuencia)
-CAUSA - EVENTO - CONSECUENCIA
+## Riesgo, problema y dato
 
-**Componente incertidumbre**: Si se lo que va a pasr, no es un riesgo. El manejo de la incertidumbre es la gestion de riesgo.
+Un **riesgo** es un evento o condición incierta que puede afectar los objetivos. En esta clase se trabaja principalmente con amenazas. Un **problema** ya ocurrió; un **dato** es una observación que puede servir para detectar uno u otro.
 
-## Proceso teorico
-1. **Identificacion**: Identificar riesgos del proyecto sw.
-	- Podemos clasificar en:
-		- Clasificacion 1 (por naturaleza):
-			- Genericos: Aplican a cada proyecto. Vale la pena seguir trabajandolos porque me van a servir para otros proyectos.
-			- Especificos: Aplican solo al proyecto en cuestion. No vale la pena iterarlos
-		- Clasificacion 2 (por area):
-			- Tecnicos (SW): Encargado: Ing. Sw.
-			- Negocio (Adm): Encargado: Persona adminstrativa, sabe de pagos, etc.
-			- Proyecto (Gestion): Encargado: Lider de proyecto
-	- Podemos listarlos a partir de la clasificacion
-2. **Calcular proyeccion de riesgos**: Hacer la matriz de riesgos
-	- Armo 4 cuadrantes segun:
-		- Impacto (alto/bajo)
-		- Probabilidad de ocurrencia (alto/bajo)
-> A cada riesgo identificado los clasifico de 1 a 5 en impacto y probabilidad de ocurrencia.
-Multiplico I x P = danios potenciales \[1...25\]. **Esto se llama PROYECCION DE RIESGO**
+Ejemplos: «las ventas bajaron 6 %» es un dato; «el servidor está caído» describe un problema; «una caída del comercio electrónico podría reducir los cobros y afectar el flujo de caja» expresa un riesgo.
 
-> Identificando 10 riesgos estas super bien. no hay algo definido
+## Estructura causa–evento–consecuencia
 
-3. **Gestion de Riesgos**:
-	- Es una actividad proactiva.
-	- Una accion posible, es no ahcer nada. Reaccionar de forma "reactiva". Esto ocurre en casos en los que es mayor la gestion del riesgo.
-	- Estrategias de gestion:
-		- Evitar: Dejar en 0 la P
-		- Mitigar (reducir): Reduzco I y P.
-		- Delegar: Dejar la responsabilidad del riesgo en otro
-		- Ignorar: No hacer nada, reaccionamos reactivamente si surge.
-		- Escalar: Es como delegarlo, pero intra-empresa.
-	- Plan de contingencia:
-		- Se ejecuta cuando el riesgo se convierte en problema.
-		- Es lo que hacemos cuando se efectua el riesgo.
-		- Es una serie de pasos a ejecutar
-	- Cada problema tiene un disparador. Se define una metrica, la cual si ocurre, el riesgo se convierte en problema.
-## Preguntas de parcial
-- Cual es el proceso de la gestion de riesgo:
-	- Identificacion
-		- clasifico con cualquiera de 2 tecnicas
-			- genericos, especificos
-			- tecnicos, negocio, proycto
-	- Calcular proyeccion
-		- probabilidad de ocurrencia e impacto
-	- Gestion de riesgo
-		- definir una estrategia para la gestion de los riesgos
-		- estrategias:
-			- evitar
-			- reducir
-			- delegar
-			- ignorar
-			- escalar
-		- Cuando el riesgo se convierte en problema, se ejecuta el plan de contingencia, que es una serie de pasos a complir.
-- Ejemplificar la matriz de proyeccion
-- 
+Redactar: «Debido a **causa**, podría ocurrir **evento**, lo que produciría **consecuencia**».
+
+Ejemplo: «Por depender de un único proveedor, podría demorarse el sensor, retrasando la prueba del prototipo». La causa no es todavía el evento y la consecuencia debe vincularse a un objetivo.
+
+## Proceso
+
+1. **Identificar:** listar riesgos y sus causas. Pueden clasificarse en genéricos/específicos o técnicos/de negocio/de proyecto. También los específicos deben revisarse durante el proyecto.
+2. **Analizar y priorizar:** estimar probabilidad, impacto y horizonte temporal. Acordar escalas para que el equipo puntúe con criterios consistentes.
+3. **Planificar respuestas:** elegir estrategia, responsable, acciones, disparadores y contingencia.
+4. **Monitorear:** revisar estado, cambios, nuevos riesgos y eficacia de las acciones.
+
+## Matriz de probabilidad e impacto
+
+En el ejercicio se usan valores de 1 a 5 y el producto **P × I**, entre 1 y 25. Es un índice de prioridad sobre escalas ordinales; **no representa un daño monetario esperado**. Diez riesgos puede ser una pauta de actividad, no un número obligatorio para todos los proyectos.
+
+La exposición monetaria esperada se calcula de otro modo: probabilidad numérica × pérdida estimada, cuando ambas medidas son apropiadas.
+
+## Estrategias de respuesta
+
+- **Evitar:** cambiar el plan para eliminar la amenaza o la exposición.
+- **Mitigar/reducir:** disminuir probabilidad y/o impacto.
+- **Transferir:** acordar que un tercero asuma parte de sus consecuencias; no elimina necesariamente toda responsabilidad.
+- **Aceptar:** reconocer el riesgo; puede incluir reservas y contingencia. «Ignorar» no debe confundirse con desconocerlo.
+- **Escalar:** derivar su gestión al nivel con autoridad adecuada.
+
+El **plan de contingencia** se ejecuta ante un disparador definido; ese disparador también puede advertir que la materialización es inminente. La mitigación actúa antes para reducir la exposición.
+
+## Ejemplo complementario
+
+| Elemento | Ejemplo |
+|---|---|
+| Riesgo | Retraso del sensor por proveedor único |
+| P e I | P = 3; I = 4; prioridad = 12 |
+| Mitigación | Validar un componente alternativo |
+| Disparador | No tener despacho confirmado al llegar a la fecha límite interna |
+| Contingencia | Usar el componente alternativo y ajustar la prueba |
+| Seguimiento | Revisar entrega y disponibilidad en cada reunión |
+
+**Preguntas de parcial:** describir el proceso, redactar un riesgo completo, explicar la matriz y distinguir mitigación de contingencia. Referencia: [SEI: gestión continua de riesgos](https://www.sei.cmu.edu/documents/5836/Continuous_Risk_Management_Guidebook.pdf).

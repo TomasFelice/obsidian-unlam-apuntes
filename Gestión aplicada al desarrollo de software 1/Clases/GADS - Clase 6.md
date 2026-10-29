@@ -1,79 +1,56 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Planificacion
+tema: "Planificación: esfuerzo, duración, dependencias y camino crítico"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
-# Planificacion
-> Diseniar de que forma vamos a ejecutar cada actividad del proyecto
 
-Esto me sirve para tomar liderazgo y autoridad frente al cliente.
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
 
-### Tarea
-Es el actor principal de la planificacion
-Cuando las planifico, forman parte de nuestro "elenco".
-Si no se cuales son las tareas que tengo que hacer, no puedo hacer nada.
-Es importante tener un modelo. Tener un patron repetible para cada proyecto.
-Esto se llaman "procesos". Un conjunto de tareas que ejecuto de manera ordenada y repetida.
-Las ISO e IEEE, definen procesos.
-> Entonces, necesito un **Modelo de Proceso**. Este modelo sera IEEE o ISO
+# Planificación de proyectos
 
-Cuando identifique que tareas tengoq eu hacer, tengo que definir 3 variables:
-- **Tiempo**: *Cuanto me va a demandar hacer esa tarea. 
-	- **Esfuerzo**: Cantidad horas/hombre netas*
-	- **Duracion**: *\[Fecha fin - Fecha inicio\] de una tarea*
-- **Orden**: *Hay que establecer un orden para que todo tenga sentido. Hay que ordenalas de forma tal que consiga tener la mayor cantidad de tareas de forma paralelas.*
-	- Causas por las que no podria paralelizar:
-		- Output de una es Input de otra
-		- No tener los recursos suficientes
-- **Responsable**: Persona a cargo para que la tarea se ejecute de forma correcta
+## Qué se planifica
 
-> Duracion <> Tiempo. Ejemplo: 3hs tiempo -> 2 dias duracion
+Planificar consiste en organizar actividades, dependencias, recursos y criterios para alcanzar objetivos. Un modelo de proceso ayuda a identificar trabajo, pero puede adaptarse al contexto; no es obligatorio elegir siempre una norma IEEE o ISO.
 
-Cuando gestiono proyectos, mi principal rol es **optimizar una o varias variables**. Seria muy dificil (o imposible) optimizar todas.
-Conjunto de variables a optimizar:
-- **Energia**: Poder tener control de la energia de los recursos (personas)
-- **Tiempo**: esfuerzo/duracion
-- **Dinero**
-- **Calidad**
+Para cada tarea, definir resultado esperado, responsable y tres aspectos:
 
-Esto es porque quiero minimizar alguna o varias de las 3 variables, o porque quiero mejorar la calidad del producto.
+- **Esfuerzo:** trabajo necesario, por ejemplo horas-persona.
+- **Duración:** tiempo transcurrido de calendario o laborable, según la convención.
+- **Dependencias:** qué debe ocurrir antes y qué puede hacerse en paralelo.
 
-La **calidad** es relativa porque depende de cuanto mi producto satisface las necesidades del usuario.
+Ejemplo: una tarea puede requerir tres horas-persona y extenderse dos días porque depende de una revisión. Duplicar personas no implica reducir a la mitad su duración.
 
-### Principios
-1. **Pareto**
-La regla del 80-20. El 20% del esfuerzo, me dan el 80% de los resultados. Lo mismo viceversa.
-Sirve para definir prioridades
-2. **Costo de oportunidad**
-Es el costo que pago por poner un recurso en un lado y no en otro.
-Sirve para definir prioridades
-3. **Ley de Parkinson**
-El tiempo que le asigne a una tarea, es el tiempo que va a durar la misma.
-Mientras menos "presupuesto" le asigne a algo, probablemente mas esfuerzo le pondre y llegare al un ersultado similar que si le asignara mas.
-Intento bajar lo maximo el tiempo-energia-dinero pero no la calidad
-4. **Ley de Rendimientos Decrecientes**
-El rendimiento cada vez va achicandose a medida que mas esfuerzo general (plata, tiempo, etc) ponga.
-Es importante que detecte hasta cuando me sirve poner esfuerzo para no malgastar.
-5. **Costo hundido** (no entra a parcial)
-6. **Teoria de las restricciones** (no entra a parcial)
-Es importante para el uso de la IA.
-*"Mi sistema va a ir a la velocidad de mi proceso mas lento"*.
-No es siempre la misma, a medida que las voy detectando las voy mejorando.
-### Como armar un plan con todo esto
-1. Desglose de tareas
-Parto el problema en varias partes.
-Por ejemplo, si tengo un CRM tengo modulos de Oportunidades, Contactos, Empresas.
-2. Dependencias entre tareas
-Tengo que organizar la secuencia de actividades a realizar.
-Tengo que identificar que tarea depende de cual.
-3. Estimar esfuerzo
-De cada tarea, tengo que estimar el esfuerzo que necesito para realizar cada una.
-Le asigno a cada tarea un tiempo determinado en el cual estimo que voy a terminar dicha tarea.
-4. Camino critico
-Si ya sabemos las dependencias, y ya sabemos la estimacion e cada una
-Con esto, podemos saber el camino (pintado en rojo) que sera el critico.
-Este camino es el que determina la duracion minima del proyecto. Si se compromete alguna tarea de este camino, se retrasa la entrega final del proyecto.
-5. Asignar resposables
-A cada una de las tareas, le asigno recursos (osea, personas, responsables).
-6. Diagrama de Gantt
-	
+## Restricciones y prioridades
+
+El plan equilibra alcance, tiempo, costo, calidad y disponibilidad del equipo. La calidad incluye satisfacer necesidades y requisitos definidos; no debe tratarse solo como una preferencia subjetiva.
+
+- **Pareto:** heurística para buscar causas o trabajos de gran impacto. El 80/20 no es una proporción garantizada.
+- **Costo de oportunidad:** valor de la mejor alternativa a la que se renuncia.
+- **Ley de Parkinson:** observación sobre cómo el trabajo puede expandirse al tiempo disponible. Reducir plazos sin fundamento puede perjudicar calidad y sostenibilidad.
+- **Rendimientos decrecientes:** más recursos pueden aportar mejoras marginales menores en ciertas condiciones; no siempre desde el primer esfuerzo.
+- **Costo hundido:** gasto pasado irrecuperable que no debería determinar por sí solo decisiones futuras.
+- **Teoría de las restricciones:** identificar y gestionar el cuello de botella que limita el resultado global.
+
+Según la anotación original, costo hundido y teoría de las restricciones no entraban en ese parcial; confirmar el alcance vigente en MIEL.
+
+## Construcción del plan
+
+1. Desglosar trabajo en entregables y tareas verificables.
+2. Identificar dependencias.
+3. Estimar esfuerzo y duración, incluyendo revisiones y esperas.
+4. Calcular el camino crítico.
+5. Asignar responsables y comprobar disponibilidad real.
+6. Representar el cronograma y actualizarlo con el avance.
+
+## Camino crítico y ejemplo complementario
+
+El camino crítico es la secuencia de dependencias con mayor duración total en la red del proyecto, bajo los supuestos del plan. Sus tareas tienen holgura total nula en el caso básico. No es la lista de tareas «más importantes».
+
+Si A dura 2 días; B y C dependen de A y duran 3 y 5 días; D dura 1 día y depende de ambas, los caminos son A–B–D = 6 y **A–C–D = 8 días**. C integra el camino crítico. B tiene 2 días de holgura en este ejemplo sin restricciones adicionales de recursos.
+
+Un Gantt muestra tareas y calendario; para usarlo bien, conservar dependencias y supuestos. Si dos tareas paralelas necesitan a la misma persona a tiempo completo, revisar el plan.
+
+**Repaso:** diferenciar esfuerzo y duración y explicar qué cambio puede desplazar el camino crítico.

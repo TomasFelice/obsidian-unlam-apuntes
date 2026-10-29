@@ -1,9 +1,13 @@
 ---
 tipo: clase
 fecha: 2026-05-05
-tema: Complete el tema
+tema: "Contratos informáticos, confidencialidad y anexos"
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
-# Continuacion de [[AL - Clase 4]]
+
+# Continuación de [[AL - Clase 4]]
+
 ![[Pasted image 20260505191214.png]]
 ![[Pasted image 20260505191547.png]]
 ![[Pasted image 20260505192105.png]]
@@ -20,11 +24,13 @@ tema: Complete el tema
 ![[Pasted image 20260505203852.png]]
 
 ---
-# Derecho Informatico
-*Que es lo comun a todos lo contratos?*
-* ***Acuerdo de confidencialidad**
-* Se suscribe en la etapa precontractual, cuando empezamos a negociar
+
+# Derecho Informático
+
+**Confidencialidad en la negociación:** puede acordarse antes de compartir información sensible mediante un NDA, o incluirse como cláusula del contrato. No es un requisito universal de validez de todo contrato.
+
 ## Acuerdo de confidencialidad
+
 ![[Pasted image 20260505205919.png]]
 ![[Pasted image 20260505205947.png]]
 ![[Pasted image 20260505210145.png]]
@@ -32,7 +38,9 @@ tema: Complete el tema
 ![[Pasted image 20260505211342.png]]
 
 ---
+
 # Anexos especiales
+
 ![[Pasted image 20260505212110.png]]
 ![[Pasted image 20260505212630.png]]
 ![[Pasted image 20260505212802.png]]
@@ -40,3 +48,15 @@ tema: Complete el tema
 ![[Pasted image 20260505213101.png]]
 ![[Pasted image 20260505213406.png]]
 ![[Pasted image 20260505213529.png]]
+
+---
+
+## Complemento de estudio
+
+### Confidencialidad y anexos
+
+Un acuerdo de confidencialidad debe permitir identificar información protegida, usos permitidos, personas autorizadas, excepciones y duración. Puede ser unilateral o recíproco según quién revele información. No confundir confidencialidad con transferencia de propiedad intelectual.
+
+Como guía práctica, un anexo técnico puede definir entregables, ambientes, interfaces, pruebas y criterios de aceptación. Un SLA puede precisar niveles de servicio, cómo se miden y qué ocurre ante incumplimientos. Estos elementos son una propuesta de análisis; no se atribuyen a una cláusula legal universal.
+
+**Repaso:** explicar qué conviene acordar antes de revelar código o datos y qué cuestiones deben quedar en el contrato principal. Relacionar con [[AL - Clase 4]].

@@ -1,8 +1,14 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Introduccion
+tema: "Ciclos de vida, selección de modelos y modelos de negocio"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
+
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
+
 # Modelos de Ciclo de Vida y Modelos de Negocio
 
 ## Idea central de la clase
@@ -153,7 +159,7 @@ El sistema completo se descompone antes de comenzar en un número conocido de in
 
 Cada incremento ejecuta una unidad mínima de proceso completa.
 
-Entra el concepto de **MVP**. Cada incremento debe aportar valor.
+Cada incremento busca aportar valor. Un MVP permite validar hipótesis con el mínimo producto viable; no es sinónimo de cualquier incremento.
 
 ### Flujo conceptual
 
@@ -306,7 +312,7 @@ Características:
 - se utiliza para obtener feedback;
 - posteriormente se descarta.
 
-No necesita cumplir los estándares técnicos del producto final porque su código no será reutilizado.
+Puede simplificar estándares del producto final porque su código se descarta, pero debe mantener los controles necesarios para los datos y el entorno que utiliza.
 
 ---
 
@@ -581,7 +587,7 @@ Se necesita suficiente escala y una buena conversión de usuarios gratuitos a pa
 
 ---
 
-## 13.2. Suscripción / SaaS
+## 13.2. Suscripción y entrega como SaaS
 
 El usuario paga periódicamente para acceder al software.
 
@@ -596,7 +602,7 @@ Ejemplos:
 
 - Microsoft 365
 - Adobe Creative Cloud
-- Netflix
+- Servicio digital de suscripción (no todo servicio de suscripción es SaaS)
 
 ### Ventaja principal
 
@@ -744,7 +750,7 @@ Combina:
 - logística;
 - crédito.
 
-Es un buen ejemplo de producto que evolucionó según las necesidades del mercado latinoamericano.
+Es un buen ejemplo de producto que evoluciónó según las necesidades del mercado latinoamericano.
 
 ## Otros casos mencionados
 
@@ -949,3 +955,19 @@ Antes de escribir la primera línea de código conviene definir conscientemente:
 3. cómo se validará el producto con usuarios;
 4. cuál será el modelo de negocio;
 5. cómo se medirá el trabajo real.
+
+---
+
+## Complemento de estudio
+
+### Alcance de la clasificación utilizada
+
+La distinción «incremental = todo planificado / evolutivo = alcance abierto» es la convención didáctica usada en estos apuntes. En ingeniería de software, incremental e iterativo también describen dimensiones que pueden combinarse: entregar porciones nuevas y revisar lo construido.
+
+La criticidad o regulación no obligan por sí solas a usar cascada ni una sola entrega. Exigen prácticas de verificación, evidencia y control apropiadas. Los ejemplos de empresas ilustran ideas; no constituyen una clasificación exhaustiva ni una descripción actual verificada de sus negocios.
+
+RUP es un proceso o marco de proceso, no una herramienta informática. Conservar la clasificación por niveles que usa la cátedra, pero confirmar la atribución y la tabla de los veinte criterios en el material original antes de presentarlas como una taxonomía universal.
+
+**Ejemplo comparativo:** un primer incremento de CRM puede agregar contactos; una iteración posterior mejora su búsqueda. Un MVP puede usar una parte de esa funcionalidad para probar si los usuarios resuelven una necesidad relevante.
+
+**Repaso:** justificar un ciclo para un caso concreto indicando incertidumbre, entregas útiles, restricciones y disponibilidad de usuarios; evitar decidir solo por el nombre del producto.

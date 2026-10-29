@@ -1,18 +1,23 @@
 ---
 tipo: clase
-fecha: 2026-05-05
-tema: Derecho Informático
+fecha: 2026-05-19
+tema: "Contratos de hosting, continuidad y escrow de código fuente"
+fecha_original: 2026-05-05
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
-# Derecho Informatico
+
+# Derecho Informático
+
 ![[Pasted image 20260519191149.png]]
 ![[Pasted image 20260519191259.png]]
 ![[Pasted image 20260519191405.png]]
 ![[Pasted image 20260519191515.png]]
 ![[Pasted image 20260519191725.png]]
 ![[Pasted image 20260519191834.png]]
-OPS -> Baterias para soportar un corte de luz. Lo mas critico, se conecta ahi para no perder la conexion electrica.
+**UPS o SAI:** sistema de alimentación ininterrumpida que mantiene temporalmente la energía ante un corte. La autonomía y la carga admisible dependen del equipo.
 ![[Pasted image 20260519192111.png]]
-En la captura anerior, falta mencionar el contrato de confidencialidad.
+En la captura anterior, falta mencionar el contrato de confidencialidad.
 ![[Pasted image 20260519192407.png]]
 ![[Pasted image 20260519192834.png]]
 ![[Pasted image 20260519193158.png]]
@@ -23,7 +28,9 @@ En la captura anerior, falta mencionar el contrato de confidencialidad.
 ![[Pasted image 20260519194320.png]]
 
 ---
+
 # Contrato de hosting
+
 ![[Pasted image 20260519195454.png]]
 ![[Pasted image 20260519195730.png]]
 ![[Pasted image 20260519195758.png]]
@@ -58,7 +65,7 @@ Etapa precontractual
 ![[Pasted image 20260519205548.png]]
 ![[Pasted image 20260519210330.png]]
 
-Hay que tener el codigo alojado en alguna plataforma para que si al dev le pasa algo, se pueda recuperar. Aplica a los proveedores. Debe ser en un tercero.
+**Escrow de código fuente:** puede pactarse el depósito del código y los materiales necesarios en un tercero, con condiciones de actualización y liberación. No equivale a tener un repositorio ni constituye una obligación general para todo proveedor.
 
 
 ---
@@ -71,4 +78,18 @@ Detallar los pasos
 
 Multiple choice
 
-2hs aprox. no corrije en el momento
+2horas aprox. no corrige en el momento
+
+---
+
+## Complemento de estudio
+
+### Hosting y continuidad
+
+En un caso de hosting, identificar qué administra cada parte: infraestructura, sistema operativo, aplicación, copias y restauración. Separar disponibilidad del servicio de recuperación de datos.
+
+**RPO** expresa la pérdida de datos tolerable medida en tiempo; **RTO**, el tiempo objetivo para recuperar el servicio. Son objetivos a acordar, no garantías implícitas de contratar alojamiento.
+
+Si se pacta escrow, especificar materiales depositados, periodicidad de actualización y condiciones de liberación. Tener código sin instrucciones, dependencias o permisos de uso puede ser insuficiente para continuar el sistema.
+
+Para preparar el parcial, explicar negociación, acuerdo, ejecución y cierre con un ejemplo de desarrollo. Las indicaciones sobre duración o modalidad son notas históricas de clase.

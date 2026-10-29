@@ -1,145 +1,181 @@
 ---
 tipo: clase
 fecha: 2026-08-18
-tema: Introduccion
+tema: "Introducción a sistemas embebidos, señales y proyecto IoT"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
+
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
+
 # Cuestiones importantes
+
 Parcial: 10-11
 2da Nota un TP de IoT. Entrega y coloquio: 17-11 / 24-11
 Recuperatorio: 1-12
 
-## Actividad practoca
+## Actividad práctica
+
 - Ciclo de vida iterativo y continuo
 - Las V1 y V2 son sin notas (aprobado o reentregar). La V3 es la entrega final
 - Que se tiene en cuenta?
 	- Defensa
-	- Exposicion
+	- Exposición
 	- Si hay maqueta o no
-	- Calidad del codigo
-	- Patrones de disenio
-	- Dedicacion del alumno
+	- Calidad del código
+	- Patrones de diseño
+	- Dedicación del alumno
 	- Trabajo en equipo
 	- Desarrollo adicional
-### Como va a ser?
-Desarrollar una solucion IoT
-Se puede desplegar incluso en, por ejemplo, smartwatch. Tambien hay algo qque es node red
+
+### ¿Cómo va a ser?
+
+Desarrollar una solución IoT
+Se puede desplegar incluso en, por ejemplo, smartwatch. También hay algo que es node red
 Etapas del ciclo de vida:
-- Analisis
-- Disenio
-- Codificacion
+- Análisis
+- Diseño
+- Codificación
 - Pruebas
 Todo esto x3
 1: Sistema simulado
-2: Prototipo fisico
-3: Prototipo fisico + App android
+2: Prototipo físico
+3: Prototipo físico + App android
+
 ### V1: Sistema simulado
+
 90% simulado
 Usaremos WOKWI
-Cirtcuito simulado
-Patrones de disenio -FSM
-### V2: Prototipo fisico
-100% fisico
+Circuito simulado
+Patrones de diseño -FSM
+
+### V2: Prototipo físico
+
+100% físico
 Realizar el circuito
 Conectividad de playstore
 Iniciar Edge/Cloud computing (opcional)
+
 ### V3: Sumar app android
-100% fisico
+
+100% físico
 Completar el circuito
 Realizar conectividad con el app de android studio
 Finalizar edge/cloud
 Desplegar en smartwatch (opcional)
+
 ## Ideas
-ludico:
+
+lúdico:
 - Ruleta trucada
-- Juego de luces para ninios
-- Auto con camara
+- Juego de luces para niños
+- Auto con cámara
 social:
-- Baston inteligente
+- Bastón inteligente
 - Anteojos para no videntes
 - Pastillero inteligente
 industrial:
 - Mantenimiento predictivo de motores
 - Seguridad de operarios en planta
 - Monitoreo en condiciones ambientales
-- Gestion de equipamiento
-- Caroo transportador seguidor de linea
+- Gestión de equipamiento
+- Carro transportador seguidor de línea
 Revisar de la PPT los 17 objetivos de desarrollo sostenible (ODS)
+
 ## Trabajo con IA
+
 Comparar trabajos CON IA y SIN IA
+
 ## Condiciones
-- No nros magicos
-- No codigo comentado
-- Codigo modular
-- Seguir patron maquina de estados
+
+- No números mágicos
+- No código comentado
+- Código modular
+- Seguir patrón máquina de estados
 - Que no haya problemas de concurrencia
-- Codigo trazable y legible
+- Código trazable y legible
 
 ---
+
 # Introducción a los Sistemas Embebidos
-## Que es un SE?
-Son sistemas de HW y SW de proposito especifico integrados en algun producto del mercado
-Deben realizar algun tipo de procesamiento o control.
+
+## ¿Qué es un SE?
+
+Son sistemas de HW y SW de propósito específico integrados en algún producto del mercado
+Deben realizar algún tipo de procesamiento o control.
 Tiene un "cerebro" embebido. Esto realmente determina si es un SE o no.
-- Microprocesador: Mas optimizado que los de las computadoras. Consume menos energia
-- Microcontrolador: Menos capacidad de procesamiento que los microprocesadores. Tiene distintos componentes.
-- ASIC: Circuitos integrados (sumador, comparador, etc.)
-- FPGA: Circuito integrado
-Estos componentes se pueden usar individualmente o componerlos en conjunto para crear el producto embebido en una placa electronica
+- Microprocesador: CPU de propósito general que puede integrarse en un sistema embebido; consumo y prestaciones dependen del modelo.
+- Microcontrolador: integra CPU, memoria y periféricos para controlar un dispositivo. No se define solo por tener menor capacidad de procesamiento.
+- ASIC: circuito integrado diseñado para una aplicación específica.
+- FPGA: circuito integrado cuya lógica puede configurarse después de su fabricación.
+Estos componentes se pueden usar individualmente o componerlos en conjunto para crear el producto embebido en una placa electrónica
+
 ## Sensores y Actuadores
-**Sensor**: Dispositivo que capta estimulos del ambiente. Ejemplos:
+
+**Sensor**: Dispositivo que capta estímulos del ambiente. Ejemplos:
 - Pulsador
 - Sensor de luz, temperatura
-- Microfono
+- Micrófono
 - etc
-**Actuador**: Dispositivo que realiza una accion modificando el ambiente. Ejemplos:
+**Actuador**: Dispositivo que realiza una acción modificando el ambiente. Ejemplos:
 - Led
 - Motor
 - Display
 - etc
+
 ## Placas de Prototipado para SE
 
 - MCU (microcontrolador)
 	- Arduino, ESP32
-	- No usa SO (puede ejecutar FreeRTOS)
+	- Puede ejecutarse sin SO o con un RTOS como FreeRTOS.
 	- RAM y almacenamiento integrados
 	- Control de hw en tiempo real, IoT
 - SBC (microprocesador)
-	- Raspberry Pi, Smartphone
+	- Una Raspberry Pi es un ejemplo de SBC. Un smartphone es un sistema embebido completo, no necesariamente una placa de prototipado.
 	- Usa SO
 	- RAM y almacenamiento externos
-	- Computacion embebida, multimedia, IA
-Las mas usadas e importantes son:
+	- Computación embebida, multimedia, IA
+Las más usadas e importantes son:
 - Arduino
 - Raspberry PI
 - ESP32
+
 ### ESP32
-> GPIO: Pines que pueden configurarse como entrada o salida segun su tipo
+
+> GPIO: Pines que pueden configurarse como entrada o salida según su tipo
 
 ## Baremetal vs SO
-> Baremetal -> HW pelado (app->os->drivers->hw)
-> SO -> justamente el intermediario entre el HW y mi programa (app->hwlibs->hw)
+
+> Bare metal: aplicación → bibliotecas/controladores → hardware, sin sistema operativo.
+> Con SO: aplicación → servicios del sistema operativo/controladores → hardware.
 
 El firmware puede ejecutar sobre baremetal o sobre un SO
 
-## Compilacion de un SE
-**CrossCompilar (Compilacion Cruzada)**: Compilar un programa en una arquitectura para que se ejecute en otra. Conectamos por USB nuestra PC a la ESP y compilamos.
-## Depuracion de un SE
+## Compilación de un SE
+
+**CrossCompilar (Compilación Cruzada)**: Compilar un programa en una arquitectura para que se ejecute en otra. Conectamos por USB nuestra PC a la ESP y compilamos.
+
+## Depuración de un SE
+
 Hacemos el paso inverso. Depuramos desde la PC lo que pasa en el ESP
-- Depuracion indirecta:
+- Depuración indirecta:
 	- printf en un sistema embebido
 	- Asi se debuggea en ESP32 / arduino UNO
 - GDB:
-	- Herramienta que se implementa con el compilador
-	- Permite el control de la ejecucion del programa
-	- En una PC se corre el cliente para poder controlar remotamente la ejecucion
+	- Depurador que puede usar símbolos generados durante la compilación.
+	- Permite el control de la ejecución del programa
+	- En una PC se corre el cliente para poder controlar remotamente la ejecución
 	- Permite ejecutar paso a paso el programa embebido
-	- Haces una arquitectura Cliente-Servidor. Instalo GDB en cliente y GDB server en servidor. GDB necesita de bastante poder de computo
+	- GDB en la computadora puede comunicarse con un servidor o una sonda de depuración; el mecanismo depende de la plataforma.
 - JTAG
-	- Conexion serie que accede a la electronica implementada dentro del procesador para controlae su funcionamiento
-	- Puede afectar el reloj del micro y se accede al HW, por direccion de memoria
-	- Acceso especifico a las patas del integrado.
+	- Conexion serie que accede a la electrónica implementada dentro del procesador para controlar su funcionamiento
+	- Puede afectar el reloj del micro y se accede al HW, por dirección de memoria
+	- Acceso específico a las patas del integrado.
+
 ## Estructura de un programa en ESP32
-- Programacion del ESP32
+
+- Programación del ESP32
 	- ESP-IDF
 	- Framework arduino (usaremos este por practicidad)
 *Configuracion inicial*
@@ -152,7 +188,7 @@ setup()
 ```
 1 vez
 |
-*Codigo pricipal*
+*Código principal*
 ```
 loop()
 {
@@ -160,46 +196,52 @@ loop()
 	////
 }
 ```
-### Protoboard
-Es una forma mas facil de conectar cosas. Por ejemplo, conectar una bateria o hacer circuitos
 
-## Tipos de Senales
-- Senal digital (1-0)
+### Protoboard
+
+Es una forma más fácil de conectar cosas. Por ejemplo, conectar una batería o hacer circuitos
+
+## Tipos de Señales
+
+- Señal digital (1-0)
 	- GPIOS Digitales en el pinout
 	- Por ejemplo, un pulsador
-- Senal analogica de entrada
+- Señal analógica de entrada
 	- GPIOS ADC
-	- Solo vamos a poder usar las entradas analogicas del puerto ADC2 cuando el controlador Wifi no haya sido iniciado (ya que WiFi usa este canal. Usar ADC1 por defecto para este fin)
-	- Es una senal que su valor de tension o voltaje varia constantemente y puede tomar cualquier calor (continuo)
-	- Senal analoga -> Senal muestreada -> Senal mantenida (digitalizada)
-- Senal analogica de salida
-	- DAC (pura analogica)
+	- Solo vamos a poder usar las entradas analógicas del puerto ADC2 cuando el controlador Wifi no haya sido iniciado (ya que WiFi usa este canal. Usar ADC1 por defecto para este fin)
+	- Una señal analógica puede tomar valores continuos dentro de su rango; no necesariamente varía todo el tiempo. El ADC la muestrea y cuantiza.
+	- Señal análoga -> Señal muestreada -> Señal mantenida (digitalizada)
+- Señal analógica de salida
+	- DAC (pura analógica)
 		- Audio por parlantes
-	- PWM (digitalizada) (Pulse Width Modulation)
+	- PWM (Pulse Width Modulation): señal digital con ciclo de trabajo variable.
 		- Leds
 		- Buzzer
 		- Motores
 		- Servos
+
 ## Prototipo vs Producto Final
+
 > Ver en casa
 
-## Como usar WOKWI?
+## ¿Cómo usar WOKWI?
+
 [Wokwi - World's most advanced ESP32 Simulator](https://wokwi.com/)
 
 **Tipos de sensores en simulador**
 - Digitales
 	- pulsador
 	- interruptor deslizable
-	- boton de joystick
+	- botón de joystick
 	- keypad
 	- pir
 	- sensor de distancia
 	- sensor de temperatura
 	- receptor ir-control remoto
-- analogicos
-	- potenciometro
+- analógicos
+	- potenciómetro
 	- sensor de luz (LDR)
-	- potenciomentro deslizable
+	- potenciómetro deslizable
 	- joystick (movimiento)
 	- ....
 
@@ -209,36 +251,53 @@ Es una forma mas facil de conectar cosas. Por ejemplo, conectar una bateria o ha
 	- LED RGB (prendido-apagado)
 	- Buzzer (prendido-apagado)
 	- Motor (prendido-apagado)
-	- Rele
+	- Relé
 	- Display LCD
 	- Neopixel
-- Analogico
+- Control de intensidad, velocidad o posición (la señal puede ser PWM u otro protocolo, según el dispositivo)
 	- Led (intensidad)
 	- LED RGB (Cambiar de color)
-	- Buzzer (melodia)
-	- Moto (Controlar la l=velocidad)
+	- Buzzer (melodía)
+	- Motor (controlar velocidad mediante una etapa adecuada)
 	- Servomotor
 
-los actuadores que seniales usan? Pregunta de parcial
+los actuadores que señales usan? Pregunta de parcial
 
 ---
+
 # Enunciado API
+
 ## V1
+
 Hay que armar el circuito simulado en Wokwi
-- Construccion circuito
-- Codigo del embebido
-	- simulacion sin erroes
+- Construcción circuito
+- Código del embebido
+	- simulación sin errores
 	- no esperas bloqueantes
-	- maquinas de estado
+	- máquinas de estado
 	- dos tareas con freertos
-	- no codigo comentado innecesario
+	- no código comentado innecesario
 - Informe
 	- Por MIEL
 	- PDF
 	- Formato paper
 **Entrega: 22-09**
-El circuito fisico es opcional
+El circuito físico es opcional
 
 Para la semana que viene mandar 2 ideas. Indicar:
 - Idea del proyecto
 - Sensores y actuadores que vamos a usar
+
+---
+
+## Complemento de estudio
+
+### Conceptos que conviene distinguir
+
+Un microcontrolador integra CPU, memorias y periféricos; un microprocesador suele requerir más componentes externos. No definirlos solo por su velocidad o consumo. **Firmware** es software asociado al dispositivo y puede ejecutarse con o sin SO.
+
+Compilación cruzada significa generar ejecutables para una plataforma destino distinta de la de desarrollo; compilar y cargar por USB son pasos diferentes. GDB puede controlar la depuración remota mediante un servidor o sonda; no siempre se instala un GDB server completo dentro del microcontrolador.
+
+**PWM** es una señal digital que modifica el ciclo de trabajo; no es una salida DAC. Un actuador puede requerir una etapa de potencia: el GPIO no alimenta directamente un motor. En ESP32, pines, ADC, DAC e interacción con Wi-Fi dependen de la variante del chip.
+
+**Repaso:** explicar sensor, actuador, firmware y compilación cruzada con el proyecto propio. Separar requisitos de la cátedra de propiedades generales de los embebidos.

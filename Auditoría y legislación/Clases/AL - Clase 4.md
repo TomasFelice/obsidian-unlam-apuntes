@@ -1,29 +1,44 @@
 ---
 tipo: clase
 fecha: 2026-04-28
-tema: Contratos Informaticos
+tema: "Contratos Informáticos"
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
+
 # Contratos Informáticos
+
 ## Contratos
-> Definicion: Acto juridico mediante el cual dos o mas partes manifiestan su consentimiento para crear, regular, modificar, transferir o extinguir relaciones juridicas patrimoniales
+
+> Definición: Acto jurídico mediante el cual dos o más partes manifiestan su consentimiento para crear, regular, modificar, transferir o extinguir relaciones jurídicas patrimoniales
 
 ![[Pasted image 20260428191506.png]]
-acto != hecho
-- acto -> Intervencion humana
-- hecho -> No necesita intervencion humana (un rayo)
+**Hecho jurídico:** acontecimiento con consecuencias jurídicas; puede ser natural o humano. **Acto jurídico:** acto voluntario lícito orientado inmediatamente a producir esas consecuencias. La diferencia no es simplemente intervención humana frente a naturaleza.
+
 ## Naturaleza, Objeto, Partes
+
 ![[Pasted image 20260428195909.png]]
-## Forma, contenido, cumplimiento, interpretacion
+
+## Forma, contenido, cumplimiento, interpretación
+
 ![[Pasted image 20260428200058.png]]
-## Espiritu del nuevo Codigo Civil y Comercial
+
+## Espíritu del nuevo Código Civil y Comercial
+
 ![[Pasted image 20260428203927.png]]
-## Nuevo Codigo Civil y Comercial
+
+## Nuevo Código Civil y Comercial
+
 ![[Pasted image 20260428204828.png]]
 ![[Pasted image 20260428205005.png]]
+
 ## Nuevos Principios CCYCN
+
 ![[Pasted image 20260428205224.png]]
 ![[Pasted image 20260428210108.png]]
-## Contratos informaticos
+
+## Contratos informáticos
+
 ![[Pasted image 20260428211400.png]]
 ![[Pasted image 20260428211502.png]]
 ![[Pasted image 20260428211509.png]]
@@ -54,3 +69,17 @@ acto != hecho
 ![[Pasted image 20260428215935.png]]
 ![[Pasted image 20260428220049.png]]
 ![[Pasted image 20260428220813.png]]
+
+---
+
+## Complemento de estudio
+
+### Analizar un contrato informático
+
+Un contrato organiza obligaciones patrimoniales entre partes. Para estudiarlo, distinguir objeto, sujetos, consentimiento, forma y efectos; no todos exigen la misma forma. El artículo 957 del Código Civil y Comercial define el contrato; los artículos 257 y 259 permiten distinguir hecho y acto jurídico.
+
+Guía de lectura propuesta: identificar alcance y entregables, aceptación, precio y pagos, licencias o titularidad, soporte, responsabilidad y terminación. Separar una obligación de entregar un desarrollo de una licencia de uso o un servicio de alojamiento.
+
+**Ejemplo:** «entregar el sistema» es insuficiente como criterio de aceptación. Deben acordarse condiciones verificables y el tratamiento de observaciones.
+
+Fuente: [Código Civil y Comercial, arts. 257, 259 y 957](https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion).

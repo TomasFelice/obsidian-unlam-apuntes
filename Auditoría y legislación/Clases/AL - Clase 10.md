@@ -1,9 +1,14 @@
 ---
 tipo: clase
-fecha: 2026-06-09
-tema:
+fecha: 2026-06-23
+tema: "Pericias y delitos informáticos"
+fecha_original: 2026-06-09
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
+
 # Pericias informaticas
+
 ![[Pasted image 20260623193143.png]]
 ![[Pasted image 20260623193310.png]]
 ![[Pasted image 20260623193923.png]]
@@ -17,7 +22,9 @@ tema:
 ![[Pasted image 20260623201506.png]]
 
 ---
-# Delitos informaticos
+
+# Delitos informáticos
+
 ![[Pasted image 20260623202114.png]]
 ![[Pasted image 20260623204709.png]]
 ![[Pasted image 20260623210356.png]]
@@ -33,3 +40,17 @@ tema:
 ![[Pasted image 20260623223018.png]]
 ![[Pasted image 20260623223144.png]]
 ![[Pasted image 20260623223741.png]]
+
+---
+
+## Complemento de estudio
+
+### Pericia y evidencia digital
+
+Una pericia responde preguntas técnicas con procedimientos documentados. Distinguir adquisición, examen, análisis e informe. Registrar origen, responsables, transferencias y acciones realizadas sobre la evidencia; preservar originales cuando corresponda y justificar las limitaciones del método.
+
+Un hash ayuda a comprobar que dos contenidos coinciden o no cambiaron respecto de una referencia; por sí solo no demuestra autoría ni veracidad. La cadena de custodia documenta manejo y trazabilidad.
+
+Fuente técnica: [NIST SP 800-86](https://csrc.nist.gov/pubs/sp/800/86/final).
+
+La [Ley 26.388](https://www.argentina.gob.ar/normativa/nacional/141790/texto) incorporó modificaciones al Código Penal vinculadas a sistemas y datos. No es un catálogo autónomo de todo delito informático; para un caso concreto identificar conducta, autorización y artículo aplicable. No confundir incidente de seguridad con delito automáticamente.

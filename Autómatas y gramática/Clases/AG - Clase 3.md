@@ -1,14 +1,21 @@
 ---
 tipo: clase
-fecha: 2026-04-20
-tema: Unidad 2
+fecha: 2026-09-04
+tema: "Expresiones regulares y autómatas finitos"
+fecha_original: 2026-04-20
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
-## Repaso ejercicios practica 1
+
+## Repaso ejercicios práctica 1
+
 ![[Pasted image 20260904191741.png]]
 ![[Pasted image 20260904192416.png]]
 
 ---
+
 # Retomamos unidad 2
+
 ![[Pasted image 20260904192505.png]]
 ![[Pasted image 20260904193239.png]]
 ![[Pasted image 20260904193312.png]]
@@ -63,7 +70,9 @@ union de los dos casos
 ![[Pasted image 20260904200739.png]]
 
 ---
-# Unidad 2 - Parte B: Automatas Finitos
+
+# Unidad 2 - Parte B: Autómatas Finitos
+
 ![[Pasted image 20260904201650.png]]
 ![[Pasted image 20260904201806.png]]
 ![[Pasted image 20260904201902.png]]
@@ -90,3 +99,14 @@ union de los dos casos
 ![[Pasted image 20260904212702.png]]
 ![[Pasted image 20260904212938.png]]
 
+---
+
+## Complemento de estudio
+
+### AFD, AFND y equivalencia
+
+Un AFD tiene una transición por estado y símbolo bajo la convención de función total. Un AFND puede tener varias posibilidades y, según el modelo, transiciones ε. Ambos reconocen exactamente los lenguajes regulares.
+
+Para comprobar una expresión regular, probar la cadena mínima, el caso de cero repeticiones, los límites de cada bloque y cadenas que violen una sola condición. Un contraejemplo basta para refutarla; algunos ejemplos favorables no demuestran equivalencia.
+
+La expresión a(a|b)*cc* exige una a inicial, luego una secuencia de a o b y al menos una c final. No se puede declarar correcta o incorrecta sin compararla con el lenguaje objetivo. La anotación «NO» del ejercicio se refiere a su consigna, no a que la expresión sea inválida.

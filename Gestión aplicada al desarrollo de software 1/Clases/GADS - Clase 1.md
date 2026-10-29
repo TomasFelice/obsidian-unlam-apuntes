@@ -1,91 +1,58 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Introduccion
+tema: "Producto, proceso, proyecto y modelos de negocio"
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
-> Parciales a desarrollar. Prestar atencion a los ejemplos de preguntas que suelen dar. Se suelen repetir en los parciales.
-> Parciales a desarrollar. Prestar atencion a los ejemplos de preguntas que suelen dar. Se suelen repetir en los parciales.
+
+# Gestión aplicada al desarrollo de software
+
+## Producto, proceso y proyecto
+
+El **producto software** comprende programas y artefactos asociados, como especificaciones, diseños, pruebas y documentación. El **proceso software** es el conjunto de actividades con que se construye, entrega y mantiene ese producto.
+
+Un **proyecto** es un esfuerzo temporal con objetivos, alcance, recursos y restricciones. En clase se vincula producto y proceso para explicarlo, pero no alcanza con definirlo como su suma.
+
+Un recorrido posible es: necesidad → análisis → especificación → diseño → construcción → pruebas → software operativo. Los documentos son resultados de las actividades; la secuencia puede repetirse según el ciclo de vida.
+
+## Recursos y seguimiento
+
+Planificar exige considerar recursos humanos, físicos y económicos. El tiempo y el costo dependen del trabajo, la disponibilidad, las dependencias y la productividad; agregar personas no reduce la duración de manera proporcional.
+
+El estudio de viabilidad y la preparación de presupuestos consumen recursos. Su forma de cobro depende del acuerdo comercial.
+
+Durante el seguimiento se revisan avances, riesgos, equipo y recursos, y se ajusta el plan. Distinguir niveles de decisión:
+
+- **Estratégico:** objetivos y dirección.
+- **Táctico:** organización de medios para alcanzarlos.
+- **Operativo:** ejecución cotidiana.
+
+## Modelos de negocio digitales
+
+| Modelo | Qué describe | Ejemplo de aplicación |
+|---|---|---|
+| Freemium | Funciones gratuitas y otras pagas | CRM básico gratuito con automatizaciones pagas |
+| Suscripción | Cobro recurrente | Plan mensual por usuario |
+| Plataforma entre partes | Conecta oferta y demanda | Marketplace de servicios |
+| Transaccional | Cobro por operación | Comisión por venta |
+| SaaS | Software operado como servicio | Acceso al CRM alojado por el proveedor |
+| Licencia | Permiso de uso bajo condiciones | Licencia instalada en el cliente |
+
+Estas categorías se combinan: SaaS describe una forma de entrega; suscripción, una forma de cobro. Una licencia no implica siempre pago único ni propiedad del código.
+
+## Trabajo práctico
+
+Según lo anotado en clase, los grupos serán de seis o siete integrantes y trabajarán con un CRM mediante actividades de distinto alcance. Se indicó enviar a Tomás los nombres de integrantes y del grupo; confirmar destinatario y canal con la cátedra. No se ha enviado ningún mensaje desde esta revisión.
+
+Las evaluaciones se describen como preguntas a desarrollar. Usar los ejemplos de clase para practicar explicaciones con casos concretos.
+
+## Complemento de estudio
+
+Para un CRM, separar producto (gestión de contactos), proceso (analizar, diseñar, programar y probar) y proyecto (entregar una versión con alcance, fecha y presupuesto). **Repaso:** explicar cómo puede cambiar el proceso sin cambiar el objetivo del producto.
 
 ---
-# Gestion Aplicada al Desarrollo de Software
 
-> El producto sw != proceso para desarrollarlo
-
-**NECESIDAD** -> Analizamos -> *Documentar (ERS, Especificacion Funcional, etc)* -> Diseniar -> *Disenio de Arquitectura, DB, Interfaz, Dominio, etc* -> Desarrollo -> *Codigo* -> Probar -> *Documento de pruebas* -> **SOFTWARE FUNCIONAL**
-> La suma de los artefactos resultantes de cada etapa, conforman el **producto software**.
-> Las etapas, conforman lo que llamamos el **proceso software**
-
-> ***La combinacion de proceso y producto sw, es un PROYECTO***.
-
-Un **proyecto** requiere una definicion de:
-- recursos
-	- fisicos
-	- humanos
-	- economicos
-
-Los **recursos** necesarios determinan:
-- tiempo
-- costo
-necesarios para completar el proyecto.
+## Material visual de la clase
 
 ![[Pasted image 20260820201832.png]]
-En esta materia vamos a ver como estimamos las variables.
-
-> El estudio de viabilidad consume **tiempo y plata**. Los presupuestos no siempre se hacen gratuitamente, ya que consume recursos. Algunos te cobran por la accion, algunos otros te lo cobran luego.
-
-Como parte del **seguimiento (gads)** a realizar luego de tener el **roadmap** definido, tenemos que hacer:
-- Gestion de riesgos 
-- Gestion de equipos
-- Gestion de recursos (o ventas)
-
-Hay distintos niveles organizacionales:
-- Estrategico (hacia donde quiero ir)
-- Tactico (como llego)
-- Operativo (hago)
-
-### Modelos de negocios digitales
-> Una empresa desarrolla un sw para solucionar determinado problema a unna serie de potenciales cleintes.
-
-- Freemium
-	- Producto sw que brinda una funcionalidad, de forma gratuita.
-	- Para funcionalidades adicionales o mejores, se cobra suscripcion o se exige un pago unico.
-	- Ejemplos
-		- Spotify
-		- Canva
-		- ChatGPT
-- Por Suscripcion
-	- Los usuarios pagan una tarifa recurrente (generalemente mensual o anual) para acceder a un producto o servicio.
-	- Ejemplos:
-		- Netflix
-		- Spotify (hibrido con freemium)
-- P2P
-	- Pone en contacto a dos personas con un fin en comun.
-	- Ejemplos:
-		- Tinder
-		- Airbnb
-		- Uber
-- Transaccionales
-	- Por realizar determinadas transacciones o acciones, se cobra una comision.
-	- Ejemplos:
-		- Fintechs
-- SaaS
-	- Tengo un producto software y te vendo la operacion del producto.
-	- Puede ser segun volumen de uso, ventas, etc.
-	- Ejemplos:
-		- Quinttos
-		- Amazon
-		- etc
-- Licencias
-	- Los usuarios pagan una tarifa unica para adquirir el derecho al uso 
-
-> Estas definiciones no tienen por que ser estrictas. Por lo general se mezclan las categorias o mezclan algunos conceptos.
-
-
-## Trabajos practicos
-- 6 o  7 personas
-- TPs chicos y TPs grandes (armar un producto sw)
-- El producto va a ser un CRM
-- Mandar un mensaje a tomas con
-	- nombre integrantes
-	- nombre grupo
-	-  

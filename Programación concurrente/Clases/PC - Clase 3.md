@@ -1,37 +1,49 @@
 ---
 tipo: clase
 fecha: 2026-04-22
-tema: Comunicación y problemas de concurrencia
+tema: "Comunicación y problemas de concurrencia"
+fecha_fuente: nombre de capturas
+fecha_inferida: true
 ---
+
 >Colabs de la clase:
 >* [Google Colab](https://colab.research.google.com/drive/1Jz2bZQvFYdPLFf9U0kq9BMPoxd3RgDk7?usp=sharing)
 >* [Sincronismo - Clase 22/06/2026.ipynb - Colab](https://colab.research.google.com/drive/1bZgHWvqxwxWb-peA3ulk6rxWqoFOscTR?usp=sharing)
->* 
-# Comunicacion
+>*
+
+# Comunicación
+
 > Puede ser entre procesos o hilos (dependiendo del lenguaje)
 
 ## C++
+
 ![[Pasted image 20260422192304.png]]
+
 ## Python
-*Comunicacion entre procesos*:
-* Seniales
+
+*Comunicación entre procesos*:
+* Señales
 * Tuberias (Pipes)
 * Tuberias nombradas (FIFOs)
 * Colas
 * Memoria compartida (multiprocessing)
 * Sockets
-*Comunicacion entre hilos*:
+*Comunicación entre hilos*:
 * Variables, TDA, etc.
 * Colas (queue)
 * Eventos (threading)
+
 ## Java
-*Comunicacion entre procesos*:
+
+*Comunicación entre procesos*:
 * Sockets
-*Comunicacion entre hilos*:
+*Comunicación entre hilos*:
 * Variables, TDA, etc.
 * Colas (queue)
 * Eventos (threading)
+
 ## Señales
+
 ![[Pasted image 20260422193050.png]]
 > **Permite comunicar la ocurrencia de un evento**
 
@@ -39,57 +51,80 @@ tema: Comunicación y problemas de concurrencia
 ![[Pasted image 20260422193252.png]]
 
 ### en Python
+
 ![[Pasted image 20260422193503.png]]
-> El handler debe aceptar los argumentos:
-> * nro. de senial
-> * frame object (es como un stack de memoria)
+> En Python, el handler recibe el número de señal y el frame interrumpido (o None). El frame representa el contexto de ejecución; no es un segmento de memoria compartida.
 
 ![[Pasted image 20260422194116.png]]
-*En este ejemplo, se crea el tipico arbol de procesos*
+*En este ejemplo, se crea el típico arbol de procesos*
+
 ## Tuberias (Pipes)
+
 ![[Pasted image 20260422194533.png]]
 * Puede comunicar un padre y varios hijos
-* Comunicacion **unidireccional**
-* Existe una sincronizacion "automatica" entre los procesos involucrados
+* Comunicación **unidireccional**
+* Una lectura puede bloquear mientras no haya datos; esto no reemplaza la sincronización del protocolo completo.
 * Los datos se leen en el orden que se escribieron.
 ![[Pasted image 20260422194722.png]]
+
 ### En python
+
 ![[Pasted image 20260422194844.png]]
 ![[Pasted image 20260422195202.png]]
+
 ## Tuberia con nombre (FIFO)
+
 ![[Pasted image 20260422200522.png]]
 * Se puede utilizar con procesos no emparentados
-* Comunicacion **unidireccional**
-* Aparece en el sistema de archivos como un archivo mas (*si hacer un ls aparece*)
+* Comunicación **unidireccional**
+* Aparece en el sistema de archivos como un archivo más (*si hacer un ls aparece*)
+
 ### En Python
+
 ![[Pasted image 20260422200808.png]]
 ![[Pasted image 20260422201221.png]]
 ![[Pasted image 20260422201424.png]]
+
 ## Memoria compartida
-* Varios procesos acceden a un segmento de memoria en comun
-* Permite comunicacion bidireccional
+
+* Varios procesos acceden a un segmento de memoria en común
+* Permite comunicación bidireccional
 * Pueden darse races conditions
 ![[Pasted image 20260422201505.png]]
+
 ### En Python
+
 ![[Pasted image 20260422201823.png]]
 ![[Pasted image 20260422201903.png]]
+
 ## Sockets
+
 ![[Pasted image 20260422202438.png]]
+
 ### En Python
+
 ![[Pasted image 20260422202542.png]]
 ![[Pasted image 20260422202510.png]]
 Me falto la parte de cliente
+
 ## Señales en Java
+
 ![[Pasted image 20260422203155.png]]
+
 ## Comunicación en Java
+
 ![[Pasted image 20260422203350.png]]
 ![[Pasted image 20260422203641.png]]
 
 ---
+
 # Problemas de concurrencia
+
 ![[Pasted image 20260422212159.png]]
 ![[Pasted image 20260422212205.png]]
+
 ## Operación atómica
+
 ![[Pasted image 20260422212337.png]]
 ![[Pasted image 20260422212430.png]]
 ![[Pasted image 20260422212531.png]]
@@ -123,3 +158,17 @@ Me falto la parte de cliente
 ![[Pasted image 20260422220854.png]]
 
 ---
+
+---
+
+## Complemento de estudio
+
+### Comunicación y sincronización
+
+La comunicación transmite información; la sincronización ordena acciones. Compartir memoria resuelve dónde intercambiar datos, pero no quién puede modificarlos ni cuándo. Una **condición de carrera** aparece cuando el resultado depende del orden de accesos concurrentes sin coordinación.
+
+Para un productor y un consumidor, una cola segura para hilos suele ser preferible a una variable global más espera activa. Un mutex protege una región crítica; una condición permite esperar un predicado que debe comprobarse en un bucle.
+
+Un pipe POSIX se trata como flujo de bytes, no como mensajes. Definir delimitadores o longitudes y cerrar los extremos que no se usan para detectar el fin de archivo. En Python, multiprocessing.Pipe() es dúplex por defecto: no confundir esa API con el pipe POSIX unidireccional.
+
+**Repaso:** ¿por qué compartir una variable no garantiza comunicación correcta? ¿Cómo detectarías que el productor terminó?

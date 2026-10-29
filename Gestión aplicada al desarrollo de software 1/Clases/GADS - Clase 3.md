@@ -1,106 +1,55 @@
 ---
 tipo: clase
 fecha: 2026-08-20
-tema: Marketing Digital
+tema: "Marketing digital: propuesta de valor, embudo e indicadores"
+fecha_fuente: metadato original sin corroborar
+fecha_por_confirmar: true
 ---
-# Marketing Digital
-# Marketing Digital
-> Lo que solemos pensar los ing, es retrasar la venta del producto. Asumimos que si no se vende el producto es porque "le falta algo". Entonces que hacemos? Otro producto. => MAL. FACTURACION 0.
 
-En mkt no se busca:
-- visitas
-- no hacer mas funcionalidades
+> [!todo] Fecha pendiente de corroborar
+> La fecha original puede haber quedado de la plantilla. No hay capturas fechadas en esta nota para corregirla con evidencia.
 
-En mkt lo que se busca es:
-- facturacion
-	- todo lo que ingresa a la empresa (en terminos de dinero)
-	- sin facturacion no hay empresa
-	- *rentabilidad*: Diferencia entre lo que facturo y lo que gasto. **rentabilidad = facturacion - gasto**
+# Marketing digital
 
+## Vender valor y medir resultados
 
-Hay 2 tipos de gastos:
-- Directos (variables): Cuando vendo, el gasto crece. Si no vendo, es 0
-	- Esto no aplica al sw. Si vendo mas, no crece proporcionalmente el gasto directo. 
-		- Esto es un negocio **escalable**. 
-	- Si vendo hs de desarrollo, entonces si es proporcional.
+La clase advierte sobre postergar la validación comercial agregando funcionalidades. Si el producto no se vende, investigar problema, público, propuesta y canal antes de asumir que falta desarrollar más.
 
+El tráfico no equivale a ventas. Conviene conectar indicadores de atención con conversiones y resultados económicos.
 
-***De que forma puedo aumentar la facturacion?***
-> Hay 3 grandes palancas
+**Ingresos menos costos y gastos** permite calcular un resultado para un período; no es por sí solo una tasa de rentabilidad. La rentabilidad relaciona el resultado con una base, por ejemplo ingresos o capital invertido. Facturación, cobros y ganancia tampoco son equivalentes.
 
-- trafico (mas clientes, visualizaciones, gente que me conoce, etc)
-- conversion (de todo el trafico, cuantos me compraron?)
-	- podria ser con promociones
-	- mejoras en el wording
-	- embudos
-- ticket promedio (valor de la venta)
-	- podria ser subir precios
-	- vender complementos
-Si tengo algun problema en alguna de estas patas, reduzco mi facturacion
+Los costos pueden clasificarse como directos/indirectos o fijos/variables: son dimensiones diferentes. En software, copiar el producto puede tener costo marginal bajo, pero atender más usuarios puede aumentar infraestructura, soporte y otras erogaciones. Vender horas depende más directamente de capacidad disponible.
 
-Que pasa si..
-- Subo los precios
-	- Deberia tener un diferencial
-	- 
-- Bajo los precios
-	- La demanda sube
-	- Puede afectar la rentabilidad si bajo demasiado y no sube lo suficiente la demanda
+## Tres palancas de ingresos
 
-> Si no estoy vendiendo, no puedo compensarlo con mas producto. TENGO QUE VENDER.
+Para un embudo simple:
 
-***Que pasa con la publicidad paga?***
-Podria llegar a mucha mas gente
-Pero quizas no aumento la facturacion. La publicidad lleva cierto gasto que no siempre se recupera con conversion si no le pongo estrategia
+**Ingresos ≈ visitas × tasa de conversión × ticket promedio**, si todos los términos corresponden al mismo período y recorrido.
 
-**Tengo que entender MI NICHO**. Si hago un CRM para todos, no le vendo a nadie.
-***Que tengo que tener en cuenta al elegir el nicho?***
-Tengo que entender a la perfeccion a mi cliente target => **BUYER PERSON**.
-Que dolores tiene?
-Que entiende?
-Que no entiende?
-Que datos le serian relevantes?
+- **Tráfico:** personas o visitas que llegan; especificar la unidad.
+- **Conversión:** proporción que realiza la acción objetivo.
+- **Ticket promedio:** ingresos de ventas / cantidad de ventas.
 
-**Escenario A** (donde esta daniela hoy)
-- No tiene CRM
-- Sensacion de que tuvo muchas consultas pero no vendio mucho
-- no sabe lo que esta ganando
-- No sabe si su pauta esta sirviendo
-----------> Le ensenio a daniela su problema. Le ensenio como se podria solucionar. Le ensenio mi solucion. Yo le vendo a daniela la transicion al ------------->
-**Escenario B**
-- Todos los problemas o la mayoria desaparecen. No le importa las funcionalidades, sino que le resuelve y como.
+Bajar precios no garantiza mayor demanda ni mejor resultado. Aumentar publicidad puede traer tráfico sin ventas si el público o la propuesta no son adecuados.
 
+## Nicho y buyer persona
 
-## Funnel de venta
-> Es el camino que pasa el cliente desde que me conoce hasta que es mi cliente.
-> Incluso cuando es mi cliente, es importante la retencion (que me vuelva a comprar)
+Un nicho delimita un grupo con problemas y necesidades identificables. La buyer persona es una representación basada en investigación, no una descripción inventada para confirmar la idea.
 
-### Por que embudo?
-> La primera parte viene mucha gente, y no van pasando todos.
+En el ejemplo de Daniela, el punto de partida es no saber cuántas consultas convierten, cuánto se gana o si funciona la publicidad. La propuesta del CRM debe explicar la mejora esperada y cómo medirla, además de enumerar pantallas y funciones.
 
-- obtengo atenion
-- impongo confianza
-	- entregandole valor
-	- suele ser gratuita esta etapa para el cliente (para no generar friccion)
-- conversion (compra)
-	- una vez que tengo la relacion con el cliente potencial, tengo que venderle
+## Embudo de venta
 
-> **CAC (Costo de Adquisicion de Cliente)**: Lo que me cuesta tener un cliente nuevo.
+Un recorrido posible es atención → interés/confianza → contacto calificado → compra → retención. Cada transición requiere una métrica y un denominador definidos. Una encuesta puede calificar contactos, aunque también agrega fricción: comprobar su efecto.
 
-Es importante saber el **CAC por pauta**. Si me da bien, podria aumentar la inversion para aumentar la facturacion.
+## Indicadores y complemento
 
-El funeel mas sencillo, es mencionar el nicho en, por ejemplo un video, y dirigirlo a que te contacten. te puede llegar mucho trafico pero no especifico. 
-Para clasificar un poco, se puede pone runa encuesta o algo para generar algo de friccion y obtener mas info
-Luego, se puede hacer pauta especifica a esas personas.
+- **Conversión:** compras / visitantes elegibles; puede medirse también entre otras etapas.
+- **CAC:** costo de adquisición del período / clientes nuevos atribuibles. Declarar qué costos se incluyen.
+- **LTV:** valor estimado del cliente durante la relación, indicando si se calcula sobre ingresos o margen; no es el ticket de una compra. La sigla «LTB» del original probablemente aludía a LTV.
+- **Retención:** permanencia o retorno según la acción y ventana definidas.
 
-#### Indicadores
-- Trafico
-	- Cantidad de personas que interactuan con el negocio
-		- personas fisicas que entran
-		- personas que hacen clic
-- CAC
-- LTB
-	- Lo que ingresa en promedio cada vez que ingresa un cliente
-- Conversion (dependiendo del paso del funnel, miras un indicador)
-- Ticket Promedio
+Ejemplo: 1.000 visitas × 2 % de conversión × $10.000 de ticket = $200.000 de ingresos. Esto no determina la ganancia: faltan costos, gastos y criterios contables.
 
----
+**Repaso:** explicar por qué duplicar visitas puede no duplicar ingresos y por qué facturar más no garantiza rentabilidad.
