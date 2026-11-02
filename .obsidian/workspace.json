@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f2acb7a382dd81f3",
+        "id": "fb8c2d9937d167c9",
         "type": "tabs",
         "children": [
           {
-            "id": "100e782a798cacff",
+            "id": "4479e01f174229d1",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Autómatas y gramática/Clases/AG - Clase 9.md",
-                "bFile": "Autómatas y gramática/Clases/AG - Clase 9.md",
-                "aRef": ""
+                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: AG - Clase 9  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "GADS - Clase 8"
             }
           }
         ]
@@ -97,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Bienvenido.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de Bienvenido"
             }
           },
           {
@@ -193,11 +194,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 543.0999755859375
+    "width": 278.843017578125
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
@@ -205,48 +205,49 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "100e782a798cacff",
+  "active": "44772a0d0d893640",
   "lastOpenFiles": [
-    "Pasted image 20261030193206.png",
-    "Plan de Estudios.md",
-    "Revisión integral de apuntes.md",
-    "Autómatas y gramática/Clases/AG - Clase 9.md",
+    "Pasted image 20261029194632.png",
+    "Pasted image 20261029194137.png",
+    "Pasted image 20261029193905.png",
+    "Pasted image 20261029193807.png",
+    "Pasted image 20261029192116.png",
     "Pasted image 20261030212338.png",
     "Pasted image 20261030212125.png",
     "Pasted image 20261030211214.png",
     "Pasted image 20261030211122.png",
     "Pasted image 20261030210929.png",
     "Pasted image 20261030210809.png",
-    "Pasted image 20261030210534.png",
-    "Pasted image 20261030210412.png",
-    "Pasted image 20261030210316.png",
-    "Pasted image 20261030210039.png",
-    "Autómatas y gramática/Clases/AG - Clase 8.md",
-    "Autómatas y gramática/Clases/AG - Clase 4.md",
-    "Autómatas y gramática/Clases/AG - Repaso Parcial 1.md",
+    "Autómatas y gramática/Clases/AG - Clase 9.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 7.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
+    "Revisión integral de apuntes.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
+    "Autómatas y gramática/Clases/AG - Clase 8.md",
+    "Autómatas y gramática/Clases/AG - Clase 7.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 7.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 6.md",
+    "Autómatas y gramática/Clases/AG - Clase 6.md",
     "Excalidraw/Drawing 2026-10-09 21.23.04.excalidraw.md",
     "Excalidraw",
+    "Autómatas y gramática/Clases/AG - Clase 5.md",
+    "Sin título.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 5.md",
+    "Autómatas y gramática/Clases/AG - Clase 4.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Parcial 1.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 1.md",
-    "Autómatas y gramática/Clases/AG - Clase 1.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 2.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 4.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 3.md",
-    "Autómatas y gramática/Clases/AG - Clase 3.md",
-    "Autómatas y gramática/Clases/AG - Clase 2.md",
-    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 2.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
     "OpenMP-MPI.pdf",
     "OpenMP-MPI 1.pdf",
     "GPU Clase3 Memoria - Plickers.pdf",
