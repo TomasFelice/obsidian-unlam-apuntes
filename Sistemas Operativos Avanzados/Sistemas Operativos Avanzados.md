@@ -42,3 +42,4 @@ Revisión del texto y ampliaciones: 29/10/2026. Detalle de alcance y pendientes 
 - [[Sistemas Operativos Avanzados/Clases/SOA - Clase 7|SOA - Clase 7]] — Sensores Android y comunicación IoT
 - [[Sistemas Operativos Avanzados/Clases/SOA - Clase 8|SOA - Clase 8]] — Microservicios, APIs y comunicación IoT
 - [[Sistemas Operativos Avanzados/Clases/SOA - Clase 9|SOA - Clase 9]] — Repaso de parcial e industria 4.0
+- [[Sistemas Operativos Avanzados/Clases/SOA - Clase 10|SOA - Clase 10]] — Wearables, Wear OS, watchOS y comunicación entre teléfono y reloj

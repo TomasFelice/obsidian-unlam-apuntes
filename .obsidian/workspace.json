@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fb8c2d9937d167c9",
+        "id": "56b7b2f21893ce95",
         "type": "tabs",
         "children": [
           {
-            "id": "4479e01f174229d1",
+            "id": "719f04fd3ebf1ed8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
+                "file": "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GADS - Clase 8"
+              "title": "SOA - Clase 10"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "79403122860afcee",
@@ -209,24 +208,35 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "44772a0d0d893640",
+  "active": "2ea53d14c7149d9b",
   "lastOpenFiles": [
-    "Pasted image 20261029194632.png",
-    "Pasted image 20261029194137.png",
-    "Pasted image 20261029193905.png",
-    "Pasted image 20261029193807.png",
-    "Pasted image 20261029192116.png",
-    "Pasted image 20261030212338.png",
-    "Pasted image 20261030212125.png",
-    "Pasted image 20261030211214.png",
-    "Pasted image 20261030211122.png",
-    "Pasted image 20261030210929.png",
-    "Pasted image 20261030210809.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion Wear OS.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion watchOS.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - APIs Wear OS.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables",
+    "Sistemas Operativos Avanzados/Material de clase/Clase-SO-wearables1°Cuat2025 1.pptx",
+    "Sistemas Operativos Avanzados/Material de clase/Clase-SO-wearables1°Cuat2025.pptx",
+    "Sistemas Operativos Avanzados/Material de clase",
+    "Sistemas Operativos Avanzados/Parciales/2. [Parcial 2][2024][][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/1. [Parcial 2][1C2021][3900][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/7. [Parcial 1][][][][][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/6. [Parcial 1][2C2021][][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/1. [Parcial 1][1C2017][][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/2. [Parcial 1][1C2021][2900][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
+    "Pasted image 20261102190555.png",
+    "Pasted image 20261102190508.png",
+    "Pasted image 20261102190229.png",
+    "Pasted image 20261102190136.png",
+    "Pasted image 20261102185744.png",
+    "Pasted image 20261102185731.png",
+    "Pasted image 20261102185503.png",
+    "Pasted image 20261102185122.png",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
     "Autómatas y gramática/Clases/AG - Clase 9.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 7.md",
-    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
     "Revisión integral de apuntes.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
     "Autómatas y gramática/Clases/AG - Clase 8.md",
@@ -235,7 +245,6 @@
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 6.md",
     "Autómatas y gramática/Clases/AG - Clase 6.md",
     "Excalidraw/Drawing 2026-10-09 21.23.04.excalidraw.md",
-    "Excalidraw",
     "Autómatas y gramática/Clases/AG - Clase 5.md",
     "Sin título.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 5.md",
@@ -246,16 +255,6 @@
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 4.md",
     "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 3.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
-    "OpenMP-MPI.pdf",
-    "OpenMP-MPI 1.pdf",
-    "GPU Clase3 Memoria - Plickers.pdf",
-    "GPU Clase3 Memoria - Plickers 1.pdf",
-    "GPU Clase 4.pdf",
-    "GPU Clase 4 1.pdf",
-    "GPU Clase 2 - Plickers.pdf",
-    "GPU Clase 2 - Plickers 1.pdf",
-    "GPU Clase 1 - Plickers.pdf"
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md"
   ]
 }
