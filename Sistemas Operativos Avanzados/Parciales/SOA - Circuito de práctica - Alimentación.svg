@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 590" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Control de posición con un potenciómetro y un servo</title>
+  <desc id="descripcion">El ESP32 alimenta el potenciómetro con 3,3 V y lee su cursor por ADC. El ESP32 envía una señal de control al servo. Una fuente aislada de 5 V alimenta el servo. Los retornos de la fuente y del ESP32 aparecen como redes separadas. Los consumos máximos son 5 mA para el potenciómetro y 800 mA para el servo.</desc>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#145b8d"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="590" rx="24" fill="#f8fafc"/>
+  <g font-family="sans-serif" fill="#14253b">
+    <text x="40" y="56" font-size="30" font-weight="bold">Control de posición con ESP32</text>
+    <text x="40" y="89" font-size="17" fill="#41556c">La posición de la perilla debe determinar el ángulo del servo.</text>
+    <g stroke-width="2">
+      <rect x="40" y="133" width="226" height="185" rx="14" fill="#e1f3ee" stroke="#83b7ad"/>
+      <rect x="377" y="133" width="240" height="185" rx="14" fill="#e7eefb" stroke="#9db0d3"/>
+      <rect x="743" y="133" width="217" height="185" rx="14" fill="#fff2db" stroke="#d0aa69"/>
+      <rect x="743" y="351" width="217" height="104" rx="14" fill="#fff2db" stroke="#d0aa69"/>
+    </g>
+    <g fill="none" stroke-width="3">
+      <path d="M266 205 H377 M811 351 V318" stroke="#b32d42"/>
+      <path d="M266 286 H377 M893 351 V318" stroke="#475569"/>
+      <path d="M266 246 H377" stroke="#145b8d" marker-end="url(#flecha)"/>
+      <path d="M617 246 H743" stroke="#145b8d" marker-end="url(#flecha)"/>
+    </g>
+    <g font-size="19" font-weight="bold">
+      <text x="60" y="170">Potenciómetro</text>
+      <text x="397" y="170">ESP32 · por USB</text>
+      <text x="763" y="170">Servo</text>
+      <text x="763" y="418">Fuente externa aislada</text>
+    </g>
+    <g font-family="monospace" font-size="16">
+      <text x="250" y="210" text-anchor="end">VCC</text>
+      <text x="250" y="251" text-anchor="end">Cursor</text>
+      <text x="250" y="291" text-anchor="end">GND</text>
+      <text x="394" y="210">3V3</text>
+      <text x="394" y="251">ADC</text>
+      <text x="394" y="291">GND ESP</text>
+      <text x="601" y="251" text-anchor="end">GPIO OUT</text>
+      <text x="760" y="251">SIG</text>
+      <text x="811" y="302" text-anchor="middle">VCC</text>
+      <text x="893" y="302" text-anchor="middle">GND</text>
+      <text x="811" y="380" text-anchor="middle">+5 V</text>
+      <text x="893" y="380" text-anchor="middle">0 V</text>
+    </g>
+    <text x="763" y="440" font-size="15" fill="#41556c">5 V · hasta 2 A</text>
+    <rect x="40" y="477" width="920" height="82" rx="12" fill="#eef2f7"/>
+    <g font-size="17">
+      <text x="62" y="506" font-weight="bold">Datos del ejercicio</text>
+      <text x="62" y="537">Potenciómetro: 3,3 V / 5 mA máx.</text>
+      <text x="384" y="537">Servo: 5 V / 800 mA pico</text>
+      <text x="656" y="537">3V3 del ESP32: 100 mA disponibles</text>
+    </g>
+  </g>
+</svg>

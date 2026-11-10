@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" role="img" aria-labelledby="title desc">
+  <title id="title">Control de iluminación con ESP32</title>
+  <desc id="desc">El módulo de luz se alimenta con 3,3 V y tierra común. Su pin AO va al GPIO34. El GPIO35 va a una resistencia de 330 ohmios en serie con un LED cuyo cátodo va a tierra.</desc>
+  <rect width="960" height="450" rx="24" fill="#f8fafc"/>
+  <g font-family="sans-serif" fill="#14253b">
+    <text x="40" y="56" font-size="30" font-weight="bold">Control de iluminación con ESP32</text>
+    <text x="40" y="87" font-size="16" fill="#41556c">Esquema de práctica · ESP32 clásico · Alimentación de la placa por USB</text>
+    <g stroke-width="3" fill="none">
+      <path d="M262 195 H368" stroke="#bd3948"/>
+      <path d="M262 245 H368" stroke="#076e63"/>
+      <path d="M262 295 H368 M598 295 H832 V245" stroke="#475569"/>
+      <path d="M598 245 H638 L646 237 L658 253 L670 237 L682 253 L694 237 L702 245 H757" stroke="#305bb0"/>
+      <path d="M820 232 V258 M820 245 H832" stroke="#305bb0"/>
+      <path d="M800 227 L812 215 M807 229 L820 217" stroke="#a15b13"/>
+      <path d="M806 215 H812 V221 M814 217 H820 V223" stroke="#a15b13"/>
+    </g>
+    <path d="M757 245 H787 M787 232 V258 L820 245 Z" stroke="#305bb0" stroke-width="3" fill="#dbeafe"/>
+    <rect x="40" y="134" width="222" height="206" rx="14" fill="#e1f3ee" stroke="#83b7ad"/>
+    <rect x="368" y="134" width="230" height="206" rx="14" fill="#e7eefb" stroke="#9db0d3"/>
+    <g font-size="19" font-weight="bold">
+      <text x="59" y="166">Módulo LDR</text>
+      <text x="387" y="166">ESP32 DevKit</text>
+    </g>
+    <g font-family="monospace" font-size="17">
+      <text x="200" y="201">VCC</text>
+      <text x="212" y="251">AO</text>
+      <text x="200" y="301">GND</text>
+      <text x="387" y="201">3V3</text>
+      <text x="387" y="251">GPIO34</text>
+      <text x="387" y="301">GND</text>
+      <text x="517" y="251">GPIO35</text>
+      <text x="548" y="301">GND</text>
+    </g>
+    <g font-size="16">
+      <text x="650" y="220">330 Ω</text>
+      <text x="790" y="192">LED</text>
+      <text x="778" y="321" fill="#41556c">Retorno a GND</text>
+      <text x="40" y="396" fill="#41556c">El LED debe encenderse cuando baja la iluminación.</text>
+    </g>
+  </g>
+</svg>
