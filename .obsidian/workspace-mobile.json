@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "5f54b8c3bfd14665",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e24bb4a838cfd45",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f197884be0ce9045",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Parcial-1c2026"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "496f157da34ed50d",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3ef0ddd6e3178c6e",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Explorador de archivos"
+        }
+      },
+      {
+        "id": "9cbac21a5a8832ef",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Buscar"
+        }
+      },
+      {
+        "id": "4c7c55597f35ae15",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Etiquetas"
+        }
+      },
+      {
+        "id": "54eea38e85c13b8d",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "Todas las propiedades"
+        }
+      },
+      {
+        "id": "91975adf903c6446",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-bookmark",
+          "title": "Marcadores"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "df093b8a8cf8ab6e",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "2bd8b0c2bcbcf396",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Enlaces entrantes"
+        }
+      },
+      {
+        "id": "533603470c11b46a",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Enlaces salientes"
+        }
+      },
+      {
+        "id": "0a92b8dcd1587615",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Esquema"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
+      "easy-git-sync:Sync with GitHub": false
+    }
+  },
+  "active": "f197884be0ce9045",
+  "lastOpenFiles": [
+    "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.webp",
+    "Sistemas Operativos Avanzados/Parciales/Parcial.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
+    "Sistemas Operativos Avanzados/Parciales/Parcial.webp",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 7.md",
+    "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
+    "Sistemas Operativos Avanzados.md",
+    "Álgebra y Geometría Analítica 2/Álgebra y Geometría Analítica 2.md",
+    "Álgebra y Geometría Analítica 2",
+    "Álgebra y Geometría Analítica 1/Álgebra y Geometría Analítica 1.md",
+    "Álgebra y Geometría Analítica 1",
+    "Virtualización de Hardware/Virtualización de Hardware.md",
+    "Virtualización de Hardware",
+    "Tópicos de programación/Tópicos de programación.md",
+    "Tópicos de programación",
+    "Templates/Examen.md",
+    "Templates/Clase.md",
+    "Templates",
+    "Taller de integracion/Taller de integracion.md",
+    "Taller de integracion",
+    "Sistemas operativos/Sistemas operativos.md",
+    "Sistemas operativos",
+    "Sistemas de Numeración/Sistemas de Numeración.md",
+    "Sistemas de Numeración",
+    "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
+    "Sistemas Operativos Avanzados/Parciales/SOA - Circuito de práctica.svg",
+    "Sistemas Operativos Avanzados/Parciales/SOA - Circuito de práctica - Alimentación.svg",
+    "Sistemas Operativos Avanzados/Parciales/7. [Parcial 1][][][][][].pdf",
+    "Sistemas Operativos Avanzados/Parciales/Preguntas de parcial - Otra comisión.md",
+    "Sistemas Operativos Avanzados/Parciales/5. [Parcial 1][2C2021][3900][][Resuelto][].pdf",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion watchOS.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion Wear OS.png",
+    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - APIs Wear OS.png",
+    "Pasted image 20261102190229.png",
+    "Pasted image 20261102190136.png",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
+    "Seguridad de la información/Seguridad de la información.md",
+    "Pasted image 20261110154457.png"
+  ]
+}
