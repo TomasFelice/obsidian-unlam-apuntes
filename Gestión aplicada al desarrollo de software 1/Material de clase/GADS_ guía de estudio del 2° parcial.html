@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>GADS: guía de estudio del 2° parcial</title>
+<style>
+/* ---------- Tokens: mesa de noche, hoja y cinco resaltadores ---------- */
+:root {
+  color-scheme: dark;
+  --bg: #171a24; --sheet: #1f2331; --rule: #363c52; --ink: #ece8dd; --dim: #a9aebe;
+  --y: #ffd95a; --p: #ff8fb3; --g: #7be3a4; --b: #7cc4ff; --o: #ffad66; --c: var(--y);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", Georgia, serif;
+  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Roboto, Ubuntu, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.c-y { --c: var(--y); } .c-p { --c: var(--p); } .c-g { --c: var(--g); } .c-b { --c: var(--b); } .c-o { --c: var(--o); }
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 1.0625rem/1.65 var(--serif); overflow-wrap: break-word; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.top, main { width: min(1040px, 100% - 32px); margin-inline: auto; }
+.top { padding: 28px 0 18px; }
+h1 { font: 600 clamp(1.9rem, 5vw, 2.75rem)/1.1 var(--serif); letter-spacing: -.01em; margin: 0 0 8px; }
+.top p, .lead { color: var(--dim); max-width: 68ch; margin: 0; }
+main { padding: 26px 0 72px; }
+
+/* ---------- Pestañas ---------- */
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+  padding: 8px max(16px, (100% - 1040px) / 2); background: var(--bg); border-bottom: 1px solid var(--rule); }
+.tab { flex: none; font: 600 .9rem/1.2 var(--sans); color: var(--dim); background: none; border: 0; border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+.tab b { color: var(--c); margin-right: 5px; }
+.tab:hover { color: var(--ink); }
+.tab[aria-current], .tab[aria-pressed="true"], .tab[aria-current] b { color: var(--bg); }
+.tab[aria-current], .tab[aria-pressed="true"] { background: var(--c); }
+
+/* ---------- Tipografía de contenido ---------- */
+h2 { font: 600 clamp(1.6rem, 4vw, 2.1rem)/1.3 var(--serif); margin: 0 0 10px; }
+h2 span, mark, .ans strong { color: inherit; background: rgba(255, 255, 255, .12); background: color-mix(in srgb, var(--c) 30%, transparent);
+  border-radius: 3px; padding: 0 .2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+mark, .ans strong { font-weight: 700; }
+.panel > section { margin-top: 36px; padding-top: 26px; border-top: 1px solid var(--rule); }
+h3 { font: 600 1.35rem/1.25 var(--serif); margin: 0 0 12px; }
+h4 { font: 600 1.1rem/1.3 var(--serif); margin: 26px 0 10px; }
+.panel > section > p, .panel li, .bridge > p:not(.chain), .ans > p { max-width: 74ch; }
+.t { display: block; font: 700 .95rem/1.3 var(--sans); color: var(--c); margin-bottom: 6px; }
+.eg, .cap { color: var(--dim); font-size: .95rem; }
+.key { border: 1px dashed var(--c); border-radius: 8px; padding: 10px 14px; max-width: 74ch; }
+
+/* ---------- Comparaciones, tarjetas y tablas ---------- */
+.vs { display: flex; flex-wrap: wrap; gap: 1px; margin: 12px 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.vs > div { flex: 1 1 230px; padding: 14px 16px; outline: 1px solid var(--rule); }
+.vs > .full { flex-basis: 100%; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; margin: 12px 0; }
+.card, .bridge, .q { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; }
+.vs p, .card p, .cell p { margin: 0; }
+.vs p + p, .card p + p, .cell p + p { margin-top: 8px; }
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; min-width: 680px; background: var(--sheet); font-size: 1rem; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+thead th { font: 600 .85rem/1.3 var(--sans); color: var(--dim); }
+tbody th { color: var(--c); font: 700 .95rem/1.4 var(--sans); min-width: 150px; }
+tbody tr:last-child > * { border-bottom: 0; }
+.tag { display: inline-block; font: 700 .72rem/1 var(--sans); padding: 4px 8px; border-radius: 4px; color: var(--bg); background: var(--c); }
+
+/* ---------- Secuencias ---------- */
+.steps { list-style: none; counter-reset: s; padding: 0; margin: 14px 0; display: grid; gap: 12px; }
+.steps > li { counter-increment: s; position: relative; padding-left: 44px; min-height: 30px; }
+.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font: 700 .9rem/1 var(--sans); color: var(--bg); background: var(--c); }
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 10px 0; font: 600 .85rem/1.3 var(--sans); color: var(--dim); }
+.chain span { padding: 5px 10px; border: 1px solid var(--c); border-radius: 99px; color: var(--c); }
+
+/* ---------- Matriz de proyección ---------- */
+.matrix { display: grid; gap: 8px; margin: 14px 0; grid-template: "y a b" 1fr "y c d" 1fr ". x x" auto / auto 1fr 1fr; }
+.ax { font: 600 .85rem/1.2 var(--sans); color: var(--dim); text-align: center; }
+.ax-y { grid-area: y; writing-mode: vertical-rl; transform: rotate(180deg); }
+.ax-x { grid-area: x; }
+.cell { padding: 14px 16px; border: 1px solid var(--rule); border-radius: 10px; background: var(--sheet); background: color-mix(in srgb, var(--p) var(--tint, 0%), var(--sheet)); }
+.cell small { display: block; font: 600 .8rem/1.3 var(--sans); color: var(--dim); margin-bottom: 4px; }
+
+/* ---------- Customer Journey ---------- */
+.journey { list-style: none; padding: 0; margin: 14px 0 6px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 8px; }
+.journey li { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; font: .9rem/1.35 var(--sans); }
+.journey b { display: block; font: 600 1.9rem/1.2 var(--serif); }
+.journey small { color: var(--dim); font-size: .8rem; }
+.journey .lo b { color: var(--p); } .journey .hi b { color: var(--g); }
+
+/* ---------- Simulacro ---------- */
+.bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: 22px; }
+.bar > div { display: flex; gap: 4px; }
+.bridge, .q { margin-top: 14px; padding: 18px 20px; }
+.bridge h4 { margin: 10px 0 0; }
+.hd { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; font: 600 .85rem/1.3 var(--sans); color: var(--dim); }
+.n { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: var(--bg); background: var(--c); }
+.q h3 { margin: 12px 0 0; }
+textarea { display: block; width: 100%; margin: 14px 0; padding: 0 14px; resize: vertical; font: 1rem/28px var(--serif); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--bg) repeating-linear-gradient(transparent 0 27px, var(--rule) 27px 28px) local; }
+textarea::placeholder { color: var(--dim); opacity: .75; }
+.btn { font: 600 .9rem/1.2 var(--sans); color: var(--bg); background: var(--c); border: 0; border-radius: 6px; padding: 11px 16px; cursor: pointer; }
+.btn.ghost { color: var(--dim); background: none; border: 1px solid var(--rule); }
+.ans { margin-top: 16px; padding-top: 4px; border-top: 1px dashed var(--rule); }
+.ans em { font-style: normal; font-weight: 700; color: var(--c); }
+.score { font: 600 .9rem/1.4 var(--sans); color: var(--dim); margin: 18px 0 8px; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.chips li { font: 600 .8rem/1.2 var(--sans); padding: 5px 10px; border: 1px solid var(--rule); border-radius: 99px; color: var(--dim); }
+.chips .hit { color: var(--bg); background: var(--g); border-color: transparent; }
+.chips .hit::before { content: "✓ "; }
+.chips .miss { border-style: dashed; }
+
+@media (max-width: 640px) {
+  .matrix { grid-template: "b" "a" "d" "c" / 1fr; }
+  .ax { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ans { animation: abrir .25s ease; }
+  @keyframes abrir { from { opacity: 0; transform: translateY(-6px); } }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>Segundo parcial de GADS</h1>
+  <p>Gestión Aplicada al Desarrollo de Software. Cinco preguntas a desarrollar sobre las clases 6, 7 y 9. Rendís el jueves 19 de noviembre.<span id="cd"></span></p>
+</header>
+
+<nav class="tabs" aria-label="Secciones de estudio">
+  <button class="tab c-y" data-tab="planificacion"><b>1</b>Planificación</button>
+  <button class="tab c-p" data-tab="riesgos"><b>2</b>Riesgos</button>
+  <button class="tab c-g" data-tab="cx"><b>3</b>Customer Experience</button>
+  <button class="tab c-b" data-tab="conexiones"><b>4</b>Trampas y conexiones</button>
+  <button class="tab c-o" data-tab="simulacro"><b>5</b>Simulacro</button>
+</nav>
+
+<main>
+
+<!-- ==================== 1. PLANIFICACIÓN ==================== -->
+<section class="panel c-y" id="p-planificacion">
+  <h2><span>Planificación de proyectos</span></h2>
+  <p class="lead">Clase 6. Planificar es diseñar cómo se ejecuta cada tarea. El gestor optimiza variables que no puede maximizar todas a la vez.</p>
+
+  <section>
+    <h3>Planificar no es adivinar</h3>
+    <div class="vs">
+      <div><b class="t">Planificar</b><p>Es <mark>diseñar el método de ejecución de cada tarea</mark>. Otorga <mark>liderazgo, autoridad, previsibilidad y respaldo comercial</mark> frente al cliente.</p></div>
+      <div><b class="t">El actor principal es la tarea</b><p>Sin <mark>desglose de tareas</mark> no hay plan viable. A cada tarea se le asignan tres atributos: tiempo (esfuerzo y duración), orden (secuencia técnica) y responsable (quien asegura su ejecución).</p></div>
+      <div><b class="t">Procesos y estándares</b><p>Un proceso es un <mark>conjunto ordenado y repetible de tareas</mark>. Los modelos de proceso, como <mark>ISO/IEC 12207</mark> o <mark>IEEE 1074</mark>, formalizan el listado de actividades necesarias para llevar un producto a producción.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Comparativas clave</h3>
+    <div class="vs">
+      <div><b class="t">Esfuerzo</b><p><mark>Horas netas de trabajo</mark> requeridas para completar la tarea.</p></div>
+      <div><b class="t">Duración</b><p><mark>Tiempo calendario</mark> transcurrido: fecha de fin menos fecha de inicio.</p></div>
+      <div class="full"><p class="eg">Ej.: una tarea de 3 horas netas repartidas entre martes y jueves tiene un esfuerzo de 3 horas y una duración de 2 días.</p></div>
+    </div>
+    <div class="vs">
+      <div><b class="t">Orden</b><p><mark>Secuencia lógica obligatoria</mark>. Responde a la <mark>dependencia técnica y causal</mark>.</p><p class="eg">Ej.: no se puede pintar una pared sin haberla levantado, ni probar código sin haberlo desarrollado.</p></div>
+      <div><b class="t">Prioridad</b><p>Responde a <mark>decisiones estratégicas del negocio</mark>: qué conviene entregar antes.</p></div>
+    </div>
+    <h4>Paralelización y sus dos limitaciones técnicas</h4>
+    <div class="vs">
+      <div><b class="t">Objetivo</b><p>Ejecutar tantas tareas en simultáneo como sea posible para <mark>acortar la duración global</mark> del proyecto.</p></div>
+      <div><b class="t">Límite 1: dependencia de datos</b><p>Hay bloqueo cuando el resultado (<mark>output</mark>) de una tarea es el insumo (<mark>input</mark>) necesario para iniciar otra.</p></div>
+      <div><b class="t">Límite 2: restricción de recursos</b><p>Faltan <mark>personas, máquinas o disponibilidad</mark> para ejecutar tareas en simultáneo.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Las 4 variables a optimizar</h3>
+    <p>La función principal del gestor es optimizar variables clave. Es <mark>inviable maximizar todas en simultáneo</mark>: cada decisión es un trade-off.</p>
+    <div class="scroll" tabindex="0" role="region" aria-label="Tabla de variables a optimizar">
+      <table>
+        <thead><tr><th>Variable</th><th>Rol en la gestión</th><th>Trade-off</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Tiempo</th><td>Plazos de entrega al mercado o al cliente.</td><td>Forzarlo sin recursos extra <mark>degrada la calidad o quema al equipo</mark>.</td></tr>
+          <tr><th scope="row">Dinero (costo)</th><td>Presupuesto disponible.</td><td>Suele ser la <mark>variable ideal a flexibilizar</mark> si se busca proteger la calidad y al equipo.</td></tr>
+          <tr><th scope="row">Energía</th><td>Motivación, carga cognitiva y ritmo del equipo.</td><td>No gestionarla deriva en <mark>agotamiento y rotación</mark> a mediano plazo.</td></tr>
+          <tr><th scope="row">Calidad</th><td>Nivel de satisfacción de las expectativas del usuario.</td><td>Es <mark>relativa y contextual</mark>: innegociable en sistemas críticos (tráfico aéreo); en startups o MVPs se puede resignar temporalmente en módulos secundarios para validar el mercado rápido.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h3>Cinco principios para decidir</h3>
+    <div class="cards">
+      <div class="card"><b class="t">Principio de Pareto (80/20)</b><p>Aproximadamente el <mark>20&nbsp;% del esfuerzo</mark> o de las funcionalidades genera el <mark>80&nbsp;% del valor</mark>. Permite priorizar lo crítico y evitar perfeccionismos innecesarios.</p></div>
+      <div class="card"><b class="t">Costo de oportunidad</b><p>Toda asignación de un recurso implica <mark>renunciar al valor</mark> que ese recurso generaría en la <mark>mejor alternativa descartada</mark>.</p><p class="eg">Ej.: el único tester encerrado en reuniones comerciales en lugar de probar código crítico.</p></div>
+      <div class="card"><b class="t">Ley de Parkinson</b><p>“El trabajo <mark>se expande hasta llenar el tiempo asignado</mark> para su realización.” Los plazos holgados fomentan la procrastinación; ajustarlos con sensatez mejora el enfoque sin mermar sensiblemente el resultado.</p></div>
+      <div class="card"><b class="t">Ley de rendimientos decrecientes</b><p>A partir de cierto punto, cada unidad extra de esfuerzo o inversión produce un <mark>incremento marginal de valor cada vez menor</mark>: la curva de valor se aplana.</p></div>
+      <div class="card"><b class="t">Teoría de las restricciones</b><p>Todo sistema avanza al ritmo de su <mark>eslabón más lento (cuello de botella)</mark>. Acelerar etapas que no son la restricción no reduce el tiempo final del proyecto.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Los 6 pasos para armar un plan de proyecto</h3>
+    <ol class="steps">
+      <li><b>Desglose de tareas (WBS / EDT).</b> Dividir la funcionalidad o módulo en actividades manejables y medibles.</li>
+      <li><b>Análisis de dependencias.</b> Definir qué tareas preceden o suceden a otras (A → B).</li>
+      <li><b>Estimación de esfuerzo.</b> Asignar las horas netas requeridas para completar cada tarea unitaria.</li>
+      <li><b>Determinación del camino crítico.</b> Identificar la <mark>secuencia más larga de tareas dependientes sin holgura</mark>. Cualquier demora en ese camino retrasa la entrega final.</li>
+      <li><b>Asignación de responsables.</b> Distribuir los recursos humanos y técnicos a cada tarea del plan.</li>
+      <li><b>Construcción del diagrama de Gantt.</b> Visualizar el cronograma con fechas, dependencias, recursos asignados y solapamientos concurrentes.</li>
+    </ol>
+  </section>
+</section>
+
+<!-- ==================== 2. GESTIÓN DE RIESGOS ==================== -->
+<section class="panel c-p" id="p-riesgos" hidden>
+  <h2><span>Gestión de riesgos</span></h2>
+  <p class="lead">Clase 7. Existe porque hay incertidumbre. Es proactiva: se actúa sobre la causa antes de que el riesgo se convierta en problema.</p>
+
+  <section>
+    <h3>Dato, problema y riesgo no son lo mismo</h3>
+    <div class="vs">
+      <div><b class="t">Dato</b><p>Un <mark>hecho objetivo o una métrica cuantitativa</mark> sobre algo que ocurre u ocurrió. Por sí solo no implica una amenaza futura.</p><p class="eg">Ej.: “Se cayeron el 6&nbsp;% de las ventas de e&#8209;commerce.”</p></div>
+      <div><b class="t">Problema</b><p>Algo que <mark>ya ocurrió y generó impacto</mark>. No hay incertidumbre: el daño ya está presente.</p><p class="eg">Ej.: “Se cayó el servidor esta mañana y no se pudo facturar.”</p></div>
+      <div><b class="t">Riesgo</b><p>Un <mark>potencial problema</mark> a futuro, sujeto a <mark>incertidumbre</mark>.</p><p class="eg">Ej.: “No contar con el cash flow adecuado a futuro producto de fallas en el stock de la web.”</p></div>
+    </div>
+    <p class="key"><b>Clave:</b> si existe certeza de que algo va a ocurrir, no es un riesgo. La gestión de riesgos existe porque hay incertidumbre.</p>
+
+    <h4>Estructura C&#8209;E&#8209;C para definir un riesgo</h4>
+    <div class="vs">
+      <div><b class="t">1. Causa</b><p>El origen fáctico o técnico.</p><p class="eg">Ej.: falta de sincronización del stock en la web.</p></div>
+      <div><b class="t">2. Evento</b><p>El suceso desencadenante.</p><p class="eg">Ej.: caída de ventas por falta de disponibilidad real.</p></div>
+      <div><b class="t">3. Consecuencia</b><p>El potencial impacto futuro.</p><p class="eg">Ej.: flujo de caja insuficiente para pagar sueldos.</p></div>
+    </div>
+    <p class="key"><b>Clave:</b> al mitigar o accionar se trabaja <mark>sobre la causa</mark>, no sobre la consecuencia.</p>
+    <p><b>Equilibrio entre control e innovación.</b> Un exceso de control burocrático encarece la gestión y frena la innovación; la falta total de control expone a la empresa a fallas críticas. No hacer nada también es un riesgo: el riesgo silencioso del status quo.</p>
+  </section>
+
+  <section>
+    <h3>Las 3 tareas del proceso formal</h3>
+    <p>Se ejecutan de manera iterativa a lo largo del ciclo de vida del proyecto.</p>
+    <ol class="steps">
+      <li><b>Identificación.</b> Relevar y clasificar los riesgos del proyecto (entre 10 y 15 suele ser un número adecuado para un proyecto estándar). Las clasificaciones deben formar <mark>conjuntos disjuntos e independientes</mark>.
+        <div class="vs">
+          <div><b class="t">Por naturaleza</b>
+            <p><b>Genéricos:</b> aplican a cualquier proyecto (ej. problemas de flujo de fondos). Conviene documentarlos y conservarlos: generan <mark>experiencia acumulada</mark> y ventaja competitiva.</p>
+            <p><b>Específicos:</b> propios de ese software o cliente (ej. el único usuario experto vive en otro país y viaja una vez al año). Se gestionan solo para ese proyecto y <mark>luego mueren</mark>.</p></div>
+          <div><b class="t">Por área y responsable</b>
+            <p><b>Técnicos:</b> compatibilidad de sistemas, APIs, arquitectura. Responsable: <mark>ingeniero de software</mark>.</p>
+            <p><b>De negocio:</b> viabilidad comercial, ventas, marketing, trade-offs de MVP. Responsable: <mark>licenciado en Administración</mark> o perfil comercial.</p>
+            <p><b>Del proyecto:</b> plazos, equipo, recursos y fechas. Responsable: <mark>líder de proyecto</mark>.</p></div>
+        </div>
+      </li>
+      <li><b>Proyección.</b> Cada riesgo se evalúa con dos variables <mark>independientes</mark>, puntuadas del 1 al 5.
+        <div class="vs">
+          <div><b class="t">Probabilidad de ocurrencia (P)</b><p>Qué tan probable es que el riesgo se convierta en problema. Se asocia a “lo desconocido”.</p></div>
+          <div><b class="t">Impacto (I)</b><p>Magnitud del daño si llega a materializarse, independientemente de su probabilidad. Se asocia al tamaño o alcance.</p></div>
+          <div class="full"><p><mark>Proyección de riesgo = I × P</mark>, con un rango de 1 a 25. Permite priorizar los riesgos más críticos en la matriz.</p></div>
+        </div>
+      </li>
+      <li><b>Gestión.</b> Es una actividad esencialmente <mark>proactiva</mark>: se planifica y se actúa antes de que ocurra el problema. Se elige una estrategia de respuesta para los riesgos prioritarios y se establecen planes de contingencia por si llegan a materializarse.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Matriz de proyección</h3>
+    <p>Cruza probabilidad e impacto para decidir dónde poner el esfuerzo de gestión.</p>
+    <div class="matrix">
+      <div class="cell" style="grid-area: b; --tint: 30%"><small>Probabilidad alta, impacto alto</small><b class="t">Crítico: foco prioritario</b><p>Falta de sincronización de stock en un e&#8209;commerce que provoca pérdida sostenida de ventas y caída del cash flow.</p><p><b>Acción:</b> gestionar activamente; evitar o mitigar con alertas y umbrales. Es el principal insumo de la fase de gestión.</p></div>
+      <div class="cell" style="grid-area: a; --tint: 17%"><small>Probabilidad baja, impacto alto</small><b class="t">Catastrófico o atípico</b><p>Incendio en las oficinas o caída total del centro de datos por un desastre natural.</p><p><b>Acción:</b> delegar o transferir (seguros, infraestructura distribuida) y tener un plan de contingencia.</p></div>
+      <div class="cell" style="grid-area: d; --tint: 8%"><small>Probabilidad alta, impacto bajo</small><b class="t">Operativo menor</b><p>Cortes breves de internet en la oficina o lluvias fuertes que demoran al equipo un día puntual.</p><p><b>Acción:</b> mitigar con medidas simples (trabajo remoto, datos móviles) o asumir.</p></div>
+      <div class="cell" style="grid-area: c"><small>Probabilidad baja, impacto bajo</small><b class="t">Despreciable</b><p>Una nevada en Buenos Aires que interrumpa el desarrollo de un software administrativo.</p><p><b>Acción:</b> ignorar. No justifica invertir tiempo ni presupuesto.</p></div>
+      <span class="ax ax-y">Impacto: bajo → alto</span>
+      <span class="ax ax-x">Probabilidad: baja → alta</span>
+    </div>
+  </section>
+
+  <section>
+    <h3>Las 5 estrategias de respuesta</h3>
+    <div class="cards">
+      <div class="card"><b class="t">Evitar</b><p>Modificar el plan, el alcance o la arquitectura para erradicar la probabilidad de ocurrencia: <mark>lleva P a cero</mark>. Suele ser la alternativa más costosa.</p><p class="eg">Ej.: reemplazar por completo un sistema defectuoso.</p></div>
+      <div class="card"><b class="t">Mitigar o reducir</b><p>Aplicar acciones preventivas <mark>sobre las causas</mark> para disminuir la probabilidad o limitar el impacto residual.</p><p class="eg">Ej.: fijar un umbral de stock mínimo para no sobrevender; respaldos en la nube ante fallas de hardware.</p></div>
+      <div class="card"><b class="t">Delegar o transferir</b><p>Trasladar la carga financiera o de respuesta a un <mark>tercero fuera de la organización</mark>.</p><p class="eg">Ej.: pólizas de seguro.</p></div>
+      <div class="card"><b class="t">Ignorar o asumir</b><p><mark>Aceptar conscientemente</mark> el riesgo y actuar de forma reactiva solo si ocurre. Se aplica cuando gestionarlo cuesta mucho más que el daño, o cuando el impacto es despreciable.</p></div>
+      <div class="card"><b class="t">Escalar</b><p>Elevar el riesgo a un <mark>nivel jerárquico superior dentro de la propia empresa</mark> cuando el equipo carece de potestad, presupuesto o recursos para decidir.</p></div>
+    </div>
+    <p class="key"><b>Trampa:</b> delegar es hacia afuera (un tercero externo); escalar es hacia arriba (dentro de la misma empresa).</p>
+  </section>
+
+  <section>
+    <h3>Mitigación, disparador y plan de contingencia</h3>
+    <div class="vs">
+      <div><b class="t">Mitigación</b><p class="cap">Antes del evento.</p><p>Acción <mark>preventiva</mark> sobre la causa: busca bajar la probabilidad o el impacto.</p><p class="eg">Ej.: umbral de stock mínimo para no sobrevender.</p></div>
+      <div><b class="t">Disparador (trigger)</b><p class="cap">La alerta previa.</p><p><mark>Indicador o métrica cuantitativa y objetiva sobre la causa</mark> que emite una alerta antes de que se consume el evento.</p><p class="eg">Ej.: no es el humo saliendo de la PC, sino el sensor que avisa cuando la CPU alcanza los 60&nbsp;°C.</p></div>
+      <div><b class="t">Plan de contingencia</b><p class="cap">Después: el riesgo ya es un problema.</p><p>Conjunto <mark>predefinido de pasos</mark> que se ejecuta <mark>única y exclusivamente</mark> si el riesgo no pudo mitigarse y se transformó en un problema real (o durante un simulacro). Permite actuar de inmediato, sin improvisar en medio de la crisis.</p><p class="eg">Ej.: rama de código ya testeada, lista para hacer rollback.</p></div>
+    </div>
+    <p class="key"><b>Diferencia crítica:</b> la mitigación es preventiva y actúa antes; el plan de contingencia es paliativo y operativo, y se dispara después de que falló la prevención.</p>
+  </section>
+</section>
+
+<!-- ==================== 3. CUSTOMER EXPERIENCE ==================== -->
+<section class="panel c-g" id="p-cx" hidden>
+  <h2><span>Customer Experience (CX)</span></h2>
+  <p class="lead">Clase 9. La experiencia es lo que el cliente percibe en todo su recorrido, no lo que la empresa cree ofrecer.</p>
+
+  <section>
+    <h3>Evolución del enfoque comercial</h3>
+    <ol class="steps">
+      <li><b>Era del producto.</b> El foco está puesto únicamente en vender el producto y sus características.</li>
+      <li><b>Era de la marca.</b> El producto sigue en el centro, pero se vende un <mark>componente aspiracional</mark> asociado a la marca.</li>
+      <li><b>Era de los consumidores (actual).</b> Gracias a las redes sociales, los consumidores tienen el poder de expresar y difundir opiniones positivas o negativas. La marca ya no puede imponer que “es la mejor”: esa valoración <mark>la construye el público y circula de consumidor a consumidor</mark>. El objetivo es que el cliente asocie la marca con la <mark>calidad, más allá del precio</mark>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>CX no es atención al cliente</h3>
+    <div class="vs">
+      <div><b class="t">Experiencia del cliente (CX)</b><p>La <mark>percepción total</mark> que el cliente tiene de una organización, como resultado de <mark>todas sus interacciones</mark>: antes, durante y después de la compra.</p><p>Es un concepto <mark>transversal y estratégico</mark>. Abarca marketing, diseño de producto, logística, facturación, estética y contratación, e incluso factores externos que la empresa no controla: reseñas de terceros, prensa, medios.</p></div>
+      <div><b class="t">Atención al cliente</b><p>Un <mark>área o rol específico y reactivo</mark>: responde consultas, resuelve quejas y brinda soporte puntual por teléfono, chat, mail o mostrador.</p><p>Es apenas <mark>un componente dentro de la CX</mark>.</p></div>
+    </div>
+    <p class="key"><b>Trampa:</b> en clase se anotó informalmente a CX como un departamento, pero la bibliografía aclara que no se limita a un único sector. Requiere <mark>colaboración interfuncional</mark> de toda la empresa para <mark>romper silos</mark>.</p>
+    <p><b>Gestión de la CX (CXM).</b> Es la estrategia empresarial para medir, influir y mejorar continuamente esa percepción. Supera la vieja idea de intentar “controlarla”.</p>
+  </section>
+
+  <section>
+    <h3>Customer Journey y WOW Experience</h3>
+    <p>El <mark>Customer Journey</mark> (“caminito del cliente”) es el mapa del recorrido completo que atraviesa un cliente en su relación con la marca. Está compuesto por múltiples <mark>puntos de contacto (touchpoints)</mark>. Para diseñarlo es clave definir el <mark>buyer persona</mark>: a quién nos dirigimos. En la metodología vista en clase se identifican todos los puntos de contacto y se incluye una <mark>evaluación del cliente de 0 a 10</mark> en cada uno.</p>
+    <ol class="journey" aria-label="Ejemplo de recorrido con la evaluación de cada punto de contacto">
+      <li>Búsqueda en Google<b>8</b></li>
+      <li>Fachada o web<b>7</b></li>
+      <li>Proceso de compra<b>9</b></li>
+      <li class="lo">Facturación<b>4</b><small>Fricción: una mala facturación arruina una buena venta.</small></li>
+      <li class="hi">Posventa<b>10</b><small>WOW: superó las expectativas.</small></li>
+    </ol>
+    <p class="cap">Las notas son un ejemplo ilustrativo: muestran dónde hay una fricción y dónde una oportunidad.</p>
+    <p><b>WOW Experience (WOW XP).</b> Es una experiencia extraordinaria que <mark>supera las expectativas</mark> y genera un impacto positivo memorable en el cliente. <mark>Cualquier punto de contacto</mark> puede convertirse en una: no solo el producto, también la atención, el empaque o la posventa.</p>
+  </section>
+
+  <section>
+    <h3>Promotores, detractores y hacer historias</h3>
+    <div class="vs">
+      <div><b class="t">Promotores</b><p>Clientes altamente satisfechos: en la escala de 0 a 10 puntúan con <mark>9&nbsp;o&nbsp;10</mark>. Recomiendan la marca por iniciativa propia y generan lo que en clase se llamó <mark>“venta desinteresada”</mark>.</p></div>
+      <div><b class="t">Detractores</b><p>Clientes insatisfechos. Es estadísticamente <mark>mucho más probable</mark> que un detractor difunda su mala experiencia que un promotor la buena, y eso puede llevar al fracaso de un negocio.</p></div>
+    </div>
+    <div class="vs">
+      <div><b class="t">Contar historias</b><p>Comunicar mensajes o <mark>promesas publicitarias</mark> sobre uno mismo: “somos los mejores”.</p></div>
+      <div><b class="t">Hacer historias</b><p>Ejecutar <mark>acciones concretas</mark> que generen <mark>vivencias memorables</mark> en el cliente.</p><p class="eg">Ej.: un regalo inesperado o resolver un problema de forma excepcional.</p></div>
+    </div>
+    <p class="key"><b>Clave:</b> estudios comparativos de variación patrimonial demuestran que hacer historias rinde mucho más que simplemente contarlas.</p>
+  </section>
+
+  <section>
+    <h3>ROE, métricas y CX digital</h3>
+    <p>El <mark>ROE o ROX (Return on Experience, retorno de la experiencia)</mark> evalúa qué <mark>resultados concretos de negocio</mark> obtiene la empresa al invertir en mejorar la experiencia del cliente, <mark>frente al costo</mark> de esas acciones. Esos resultados son recompras, retención, nuevas recomendaciones y aumento de ingresos.</p>
+    <div class="vs">
+      <div><b class="t">X&#8209;datos</b><p>Métricas de experiencia: miden la <mark>percepción</mark> del cliente.</p><p class="eg">Ej.: una calificación de 9/10.</p></div>
+      <div><b class="t">O&#8209;datos</b><p>Resultados <mark>financieros y operativos</mark> del negocio.</p><p class="eg">Ej.: gasto promedio, retención.</p></div>
+    </div>
+    <p class="key"><b>Trampa:</b> dar un regalo o tener una calificación de 9/10 sirve para medir la percepción, pero por sí solo <mark>no demuestra el ROE</mark>. Hay que vincular los X&#8209;datos con los O&#8209;datos.</p>
+
+    <h4>Las tres métricas principales</h4>
+    <div class="cards">
+      <div class="card"><b class="t">NPS (Net Promoter Score)</b><p>Mide cuánto <mark>defienden o recomiendan</mark> la marca los clientes. Distingue promotores, pasivos y detractores. Tiene limitaciones en transacciones puntuales y por diferencias culturales.</p></div>
+      <div class="card"><b class="t">CES (Customer Effort Score)</b><p>Puntuación del <mark>esfuerzo del cliente</mark>: qué tan fácil o difícil le resulta completar una tarea. Muy útil en canales digitales, con enfoque táctico o de diagnóstico.</p></div>
+      <div class="card"><b class="t">CSAT (Customer Satisfaction)</b><p>Nivel de <mark>satisfacción puntual</mark> con un producto, un servicio o un punto de contacto específico.</p></div>
+    </div>
+
+    <h4>CX digital: dos enfoques</h4>
+    <div class="vs">
+      <div><b class="t">Táctico</b><p><mark>Diagnóstico operativo</mark> del canal digital: velocidad de carga, barreras en el formulario. Se mide con CES.</p></div>
+      <div><b class="t">Estratégico (omnicanalidad)</b><p>Entender el <mark>rol del canal digital dentro de todo el recorrido</mark>.</p><p class="eg">Ej.: un cliente abandona un carrito online pero luego compra en la tienda física gracias a lo que investigó en la web.</p></div>
+    </div>
+    <p>Los clientes no piensan en canales separados: buscan resolver problemas. Por eso es vital comprender el rol de cada canal.</p>
+
+    <h4>Principios de una buena estrategia de CX</h4>
+    <ul>
+      <li>Mapear el Customer Journey.</li>
+      <li>Fomentar la colaboración interfuncional y eliminar silos: una mala facturación arruina una buena venta.</li>
+      <li>Mantener atención y escucha continua, en tiempo real.</li>
+      <li>Comunicar las mejoras realizadas, para demostrar que la marca escucha y actúa.</li>
+    </ul>
+
+    <h4>Qué aporta la CX a la dirección estratégica</h4>
+    <p>Deja de ser una métrica aislada de satisfacción y pasa a ser un medio estratégico que impulsa <mark>resultados financieros sostenibles</mark>. Incrementa los ingresos y el valor del ciclo de vida del cliente, fortalece el valor de marca y la lealtad, permite asociar la marca con la calidad por encima del precio y optimiza costos al priorizar inversiones en los puntos de contacto que el cliente realmente valora. Además, obliga a alinear a todas las áreas de la empresa y a eliminar el trabajo en silos.</p>
+  </section>
+</section>
+
+<!-- ==================== 4. TRAMPAS Y CONEXIONES ==================== -->
+<section class="panel c-b" id="p-conexiones" hidden>
+  <h2><span>Trampas y conexiones entre clases</span></h2>
+  <p class="lead">Lo que más pesa en las preguntas 1 y 2: vincular temas de clases distintas con un ejemplo y distinguir conceptos cercanos sin mezclarlos.</p>
+
+  <section>
+    <h3>Diferencias clave para la pregunta 2</h3>
+    <div class="scroll" tabindex="0" role="region" aria-label="Tabla de diferencias clave">
+      <table>
+        <thead><tr><th>Enfrentamiento</th><th>Un lado</th><th>El otro lado</th><th>La frase que suma</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Esfuerzo vs. duración<br><span class="tag c-y">Planificación</span></th>
+            <td><b>Esfuerzo:</b> horas netas de trabajo que requiere la tarea.</td>
+            <td><b>Duración:</b> tiempo calendario transcurrido (fecha de fin menos fecha de inicio).</td>
+            <td>Una tarea de 3 horas netas repartidas entre martes y jueves: esfuerzo de 3 horas, duración de 2 días.</td></tr>
+          <tr><th scope="row">Orden vs. prioridad<br><span class="tag c-y">Planificación</span></th>
+            <td><b>Orden:</b> secuencia lógica obligatoria; dependencia técnica y causal.</td>
+            <td><b>Prioridad:</b> decisión estratégica del negocio; qué conviene entregar antes.</td>
+            <td>El orden lo impone la técnica (no se prueba código sin desarrollarlo); la prioridad la elige el negocio.</td></tr>
+          <tr><th scope="row">Dato vs. problema vs. riesgo<br><span class="tag c-p">Riesgos</span></th>
+            <td><b>Dato:</b> hecho o métrica sobre algo que ocurre u ocurrió. <b>Problema:</b> ya ocurrió y generó impacto; no hay incertidumbre.</td>
+            <td><b>Riesgo:</b> potencial problema futuro, con incertidumbre. Se define con causa, evento y consecuencia.</td>
+            <td>Cambian el momento temporal y la incertidumbre. Si hay certeza de que va a ocurrir, no es un riesgo.</td></tr>
+          <tr><th scope="row">Mitigación vs. plan de contingencia<br><span class="tag c-p">Riesgos</span></th>
+            <td><b>Mitigación:</b> preventiva. Actúa antes, sobre la causa, para bajar la probabilidad o el impacto.</td>
+            <td><b>Plan de contingencia:</b> paliativo y operativo. Pasos predefinidos que se ejecutan solo si el riesgo ya es un problema, o en un simulacro.</td>
+            <td>Umbral de stock mínimo (antes) frente a rollback a una rama ya testeada (después). El disparador avisa en el medio.</td></tr>
+          <tr><th scope="row">CX vs. atención al cliente<br><span class="tag c-g">CX</span></th>
+            <td><b>CX:</b> percepción total del cliente en todas sus interacciones. Transversal y estratégica; incluye factores externos.</td>
+            <td><b>Atención al cliente:</b> área o rol reactivo que responde consultas, quejas y soporte. Un componente de la CX.</td>
+            <td>CX no es un departamento: exige colaboración interfuncional para romper silos.</td></tr>
+          <tr><th scope="row">Contar vs. hacer historias<br><span class="tag c-g">CX</span></th>
+            <td><b>Contar:</b> mensajes o promesas publicitarias sobre uno mismo (“somos los mejores”).</td>
+            <td><b>Hacer:</b> acciones concretas que generan vivencias memorables (un regalo inesperado, resolver un problema de forma excepcional).</td>
+            <td>Hacer historias rinde mucho más: lo demuestran los estudios de variación patrimonial.</td></tr>
+          <tr><th scope="row">X&#8209;datos vs. O&#8209;datos<br><span class="tag c-g">CX</span></th>
+            <td><b>X&#8209;datos:</b> métricas de experiencia; miden la percepción (una calificación de 9/10).</td>
+            <td><b>O&#8209;datos:</b> resultados financieros y operativos (gasto promedio, retención).</td>
+            <td>Una nota alta no demuestra el ROE: hay que vincular X&#8209;datos con O&#8209;datos, frente al costo.</td></tr>
+          <tr><th scope="row">CX digital táctica vs. estratégica<br><span class="tag c-g">CX</span></th>
+            <td><b>Táctica:</b> diagnóstico operativo del canal (velocidad de carga, barreras en el formulario). Se mide con CES.</td>
+            <td><b>Estratégica:</b> rol del canal digital dentro de todo el recorrido (omnicanalidad).</td>
+            <td>El cliente no piensa en canales: abandona el carrito online y compra en la tienda física.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Otras confusiones que cuestan puntos</h4>
+    <ul>
+      <li><b>Evitar no es mitigar.</b> Evitar lleva la probabilidad a cero y suele ser lo más costoso; mitigar la reduce o limita el impacto.</li>
+      <li><b>Delegar no es escalar.</b> Delegar es a un tercero externo, como un seguro; escalar es a un nivel jerárquico superior dentro de la empresa.</li>
+      <li><b>Ignorar es una decisión consciente,</b> no un olvido: se asume cuando gestionar el riesgo cuesta más que el daño.</li>
+      <li><b>Probabilidad e impacto son independientes.</b> Se puntúan por separado, del 1 al 5, y recién después se multiplican.</li>
+      <li><b>Los riesgos genéricos se conservan</b> como experiencia; los específicos mueren con el proyecto.</li>
+      <li><b>Promotor es solo quien puntúa 9&nbsp;o&nbsp;10.</b></li>
+      <li><b>Una WOW Experience puede darse en cualquier punto de contacto,</b> no solo en el producto.</li>
+      <li><b>Acelerar una etapa que no es el cuello de botella</b> no acorta el proyecto.</li>
+      <li><b>Paralelizar tiene dos límites y nada más:</b> dependencia de datos y restricción de recursos.</li>
+      <li><b>Un plazo holgado no mejora el resultado:</b> el trabajo se expande hasta llenar el tiempo asignado.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Cuatro puentes entre las clases para la pregunta 1</h3>
+    <p class="key"><b>Receta para un cruce de temas:</b> definí cada tema en una línea, enunciá el vínculo con un verbo causal (“genera”, “es la causa de”, “protege”), bajalo a un ejemplo con causa, evento y consecuencia, y cerrá con el efecto sobre el negocio o el cliente.</p>
+
+    <article class="bridge">
+      <span class="tag c-y">Planificación</span> <span class="tag c-p">Riesgos</span> <span class="tag c-g">CX</span>
+      <h4>Lo que se recorta al planificar es la causa de los riesgos</h4>
+      <p class="chain"><span class="c-y">Se fuerza el tiempo sin recursos extra</span> → <span class="c-y">Cae la calidad o se quema el equipo</span> → <span class="c-p">Causa de riesgos técnicos y de negocio</span> → <span class="c-p">El riesgo se vuelve problema</span> → <span class="c-g">Falla un punto de contacto</span> → <span class="c-g">Detractores y menos ROE</span></p>
+      <p>No se pueden maximizar las cuatro variables a la vez. Forzar el tiempo sin recursos extra degrada la <mark>calidad</mark> o agota la <mark>energía</mark> del equipo, y esa decisión es la <mark>causa</mark> de riesgos técnicos, de negocio y del proyecto. Si el riesgo se materializa, el problema aparece en un punto de contacto del <mark>Customer Journey</mark>: baja su nota de 0 a 10, genera detractores y destruye el <mark>ROE</mark>. Por eso la variable ideal a flexibilizar es el dinero.</p>
+      <p class="eg">Ej.: para llegar a una fecha comercial se resigna calidad en la sincronización de stock de un e&#8209;commerce. Se venden productos sin disponibilidad real, hay cancelaciones y reseñas negativas, y caen la recompra y el cash flow.</p>
+    </article>
+
+    <article class="bridge">
+      <span class="tag c-y">Planificación</span> <span class="tag c-p">Riesgos</span>
+      <h4>El plan muestra dónde mirar; la matriz, cuánto preocuparse</h4>
+      <p class="chain"><span class="c-y">Dependencias, recursos y camino crítico</span> → <span class="c-p">Identificación de riesgos del proyecto</span> → <span class="c-p">Proyección I × P</span> → <span class="c-y">La respuesta vuelve al plan</span></p>
+      <p>Los riesgos del proyecto (plazos, equipo, recursos y fechas) salen del propio plan. Una tarea del <mark>camino crítico</mark> no tiene holgura: si se demora, se atrasa la entrega final, así que su <mark>impacto</mark> es alto. El <mark>cuello de botella</mark> y la restricción de recursos señalan dónde es más <mark>probable</mark> el problema. La respuesta vuelve al plan: mitigar suma tareas, responsables o presupuesto, y el <mark>plan de contingencia</mark> son pasos planificados con antelación.</p>
+      <p class="eg">Ej.: el único tester pasa la semana en reuniones comerciales (costo de oportunidad). Causa: testing sin recurso disponible. Evento: se demora una tarea del camino crítico. Consecuencia: no se entrega en fecha. Disparador: los días de atraso de esa tarea en el Gantt.</p>
+    </article>
+
+    <article class="bridge">
+      <span class="tag c-p">Riesgos</span> <span class="tag c-g">CX</span>
+      <h4>Todo riesgo que se materializa cae en un punto de contacto</h4>
+      <p class="chain"><span class="c-p">Riesgo sin gestionar</span> → <span class="c-p">Problema</span> → <span class="c-g">Punto de contacto con nota baja</span> → <span class="c-g">Detractor que lo difunde</span> → <span class="c-g">Daño a la marca</span></p>
+      <p>En la <mark>era de los consumidores</mark>, un <mark>detractor</mark> difunde su mala experiencia mucho más que un promotor la buena. Por eso los problemas que tocan al cliente son <mark>riesgos de negocio</mark> de impacto alto. La CX también alimenta la gestión de riesgos: la nota de un punto de contacto o el CES son métricas objetivas que pueden funcionar como <mark>disparador</mark>. Y un plan de contingencia bien ejecutado, que resuelve el problema de forma excepcional, es <mark>hacer historias</mark>: puede convertir una falla en una WOW Experience.</p>
+      <p class="eg">Ej.: falla el pago en el proceso de compra. Con el rollback a una rama ya testeada y un aviso inmediato al cliente, el daño se limita. Sin contingencia, el cliente abandona la compra y deja una reseña negativa.</p>
+    </article>
+
+    <article class="bridge">
+      <span class="tag c-y">Planificación</span> <span class="tag c-g">CX</span>
+      <h4>Invertir en experiencia también se planifica</h4>
+      <p class="chain"><span class="c-g">X&#8209;datos y O&#8209;datos</span> → <span class="c-y">Prioridad: qué conviene entregar antes</span> → <span class="c-y">Pareto sobre los puntos de contacto</span> → <span class="c-g">ROE</span></p>
+      <p>La <mark>calidad</mark> es el nivel de satisfacción de las expectativas del usuario: es la variable del plan que más pega en la CX. Qué mejorar primero es una decisión de <mark>prioridad</mark>, y la CX la informa: conviene invertir en los puntos de contacto que el cliente realmente valora (<mark>Pareto</mark>) y frenar cuando cada mejora extra ya no mueve los resultados (<mark>rendimientos decrecientes</mark>). El <mark>ROE</mark> lo comprueba al vincular X&#8209;datos con O&#8209;datos frente al costo. Además, el recorrido cruza áreas: sin colaboración interfuncional, una mala facturación arruina una buena venta.</p>
+      <p class="eg">Ej.: en un MVP se resigna calidad en un módulo secundario, como los reportes, para validar el mercado rápido; no en el proceso de compra, que es el punto de contacto que define la recompra.</p>
+    </article>
+  </section>
+</section>
+
+<!-- ==================== 5. SIMULACRO ==================== -->
+<section class="panel c-o" id="p-simulacro" hidden>
+  <h2><span>Simulacro de parcial</span></h2>
+  <p class="lead">Dos temas con la misma estructura de cinco preguntas del primer parcial. Redactá cada respuesta como en el examen y después comparala con la respuesta modelo. Los ejemplos de los casos prácticos son una aplicación posible: en el parcial valen los tuyos, siempre que respeten la teoría.</p>
+  <p class="key"><b>Para pasar el 7:</b> en cada respuesta definí el concepto con sus términos propios, justificá el porqué, da un ejemplo concreto y vinculalo con otro tema de la materia.</p>
+  <div class="bar">
+    <div role="group" aria-label="Elegir tema">
+      <button class="tab" data-go="1" aria-pressed="true">Tema 1</button>
+      <button class="tab" data-go="2" aria-pressed="false">Tema 2</button>
+    </div>
+    <button class="btn ghost" id="reset">Borrar mis respuestas de este tema</button>
+  </div>
+  <div id="exam"></div>
+  <p class="cap">Tus respuestas se guardan solo en este navegador.</p>
+</section>
+
+</main>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* ---------- Cuenta regresiva al parcial ---------- */
+  const dias = Math.ceil((new Date(2026, 10, 19) - new Date()) / 864e5);
+  if (dias >= 0) $('#cd').textContent = dias > 1 ? ` Faltan ${dias} días.` : dias === 1 ? ' Es mañana.' : ' Es hoy.';
+
+  /* ---------- Pestañas (cada una con su #nombre en la URL) ---------- */
+  const tabs = $$('.tabs .tab'), ids = tabs.map(b => b.dataset.tab);
+  function showTab(id, alInicio) {
+    if (!ids.includes(id)) id = ids[0];
+    tabs.forEach(b => b.dataset.tab === id ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'));
+    $$('.panel').forEach(p => p.hidden = p.id !== 'p-' + id);
+    tabs[ids.indexOf(id)].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    const y = $('.top').offsetHeight;
+    if (alInicio && scrollY > y) scrollTo(0, y);
+  }
+  $('.tabs').addEventListener('click', e => {
+    const b = e.target.closest('.tab');
+    if (!b) return;
+    showTab(b.dataset.tab, true);
+    try { location.hash = b.dataset.tab; } catch {}
+  });
+  addEventListener('hashchange', () => showTab(location.hash.slice(1)));
+  showTab(location.hash.slice(1));
+
+  /* ---------- Simulacro: datos ----------
+     c = clases que toca · q = enunciado · a = respuesta modelo · k = palabras clave "Etiqueta|raíces a buscar"
+     Las raíces van en minúscula y sin tildes, separadas por "/". */
+  const CLASES = { y: 'Planificación', p: 'Riesgos', g: 'CX' };
+  const TIPOS = ['Cruce de temas con ejemplo', 'Diferencia entre conceptos cercanos', 'Proceso formal', 'Bajada a un caso práctico', 'Particularidades de métricas'];
+  const TEMAS = [[
+    { c: 'yp', q: 'Relación entre la planificación de un proyecto y la gestión de riesgos. Ejemplifique.',
+      a: `<p><strong>Planificar</strong> es <strong>diseñar el método de ejecución de cada tarea</strong>, lo que da <strong>previsibilidad</strong>. Pero todo plan se ejecuta bajo <strong>incertidumbre</strong>, y de eso se ocupa la gestión de riesgos, que es <strong>proactiva</strong>: actúa antes de que el <strong>potencial problema</strong> ocurra. La relación va en los dos sentidos.</p>
+<p><em>El plan genera riesgos.</em> El gestor <strong>optimiza variables</strong> (tiempo, dinero, energía y calidad) y no puede maximizar todas a la vez. Cada <strong>trade-off</strong> es la <strong>causa</strong> de un riesgo: forzar el tiempo sin recursos extra degrada la calidad (<strong>riesgo técnico</strong>) o quema al equipo, con agotamiento y rotación (<strong>riesgo del proyecto</strong>).</p>
+<p><em>El plan muestra dónde pega más cada riesgo.</em> El <strong>camino crítico</strong> es la secuencia más larga de tareas sin holgura: una demora ahí retrasa la entrega final, así que esos riesgos tienen <strong>impacto</strong> alto en la <strong>proyección (I × P)</strong> y se gestionan primero.</p>
+<p><em>La gestión de riesgos vuelve al plan.</em> Mitigar suma tareas, responsables o presupuesto, y el <strong>plan de contingencia</strong> son pasos planificados con antelación para no improvisar.</p>
+<p><em>Ejemplo.</em> En un e&#8209;commerce se acorta el plazo sin sumar gente y se resigna calidad en la sincronización de stock. <strong>Causa:</strong> stock sin sincronizar en la web. <strong>Evento:</strong> se venden productos sin disponibilidad real. <strong>Consecuencia:</strong> flujo de caja insuficiente. Es un riesgo de probabilidad e impacto altos, y se mitiga actuando sobre la causa (umbral de stock mínimo), no sobre la consecuencia.</p>`,
+      k: ['Diseñar el método de ejecución|metodo de ejecucion', 'Previsibilidad|previsib', 'Incertidumbre|incertidumbre', 'Proactiva|proactiv', 'Variables a optimizar y trade-off|optimiz/trade-off/trade off/variables', 'Causa, evento y consecuencia|evento/c-e-c', 'Riesgo técnico y del proyecto|tecnic', 'Camino crítico|camino critico', 'Impacto y probabilidad (I × P)|probabilidad', 'Plan de contingencia|contingencia'] },
+
+    { c: 'p', q: 'Diferencia entre dato, problema y riesgo. Dar un ejemplo de cada uno.',
+      a: `<p>Se diferencian por el <strong>momento temporal</strong> y por el <strong>grado de incertidumbre</strong>.</p>
+<ul>
+<li><strong>Dato:</strong> un <strong>hecho objetivo o una métrica cuantitativa</strong> sobre algo que ocurre u ocurrió. Por sí solo no implica una amenaza futura. Ejemplo: “cayeron un 6&nbsp;% las ventas del e&#8209;commerce”.</li>
+<li><strong>Problema:</strong> un incidente real que <strong>ya ocurrió y generó impacto</strong>. <strong>No hay incertidumbre</strong>, porque el daño ya está presente. Ejemplo: “se cayó el servidor esta mañana y no se pudo facturar”.</li>
+<li><strong>Riesgo:</strong> un <strong>potencial problema a futuro</strong>, cuya ocurrencia está sujeta a <strong>incertidumbre</strong>. Si hay certeza de que va a ocurrir, no es un riesgo. Se define con la estructura <strong>Causa, Evento y Consecuencia (C&#8209;E&#8209;C)</strong>. Ejemplo: a causa de no tener el stock sincronizado en la web, pueden venderse productos sin disponibilidad, con la consecuencia de no cubrir el flujo de caja.</li>
+</ul>
+<p>La distinción importa porque solo el riesgo se puede gestionar de forma <strong>proactiva</strong>, actuando <strong>sobre la causa</strong> y no sobre la consecuencia. Cuando el riesgo se materializa pasa a ser un problema, y ahí se ejecuta el plan de contingencia.</p>`,
+      k: ['Momento temporal|temporal/momento', 'Incertidumbre|incertidumbre', 'Hecho objetivo o métrica|hecho/metrica/factic/cuantitativ', 'Ya ocurrió y generó impacto|ya ocurrio/ya paso/ya sucedio/ya genero/ya esta', 'Potencial problema futuro|potencial', 'Causa, evento y consecuencia|evento/c-e-c', 'Actuar sobre la causa|sobre la causa/sobre las causas', 'Proactiva|proactiv'] },
+
+    { c: 'y', q: 'Qué es planificar y cuáles son los pasos para armar un plan de proyecto.',
+      a: `<p><strong>Planificar no es adivinar</strong>: es <strong>diseñar el método de ejecución de cada tarea</strong>. Otorga liderazgo, autoridad, <strong>previsibilidad</strong> y respaldo comercial frente al cliente. El <strong>actor principal es la tarea</strong>: sin desglose de tareas no hay plan viable. A cada tarea se le asignan tiempo, orden y responsable.</p>
+<p>El plan se arma en <strong>6 pasos</strong>:</p>
+<ol>
+<li><strong>Desglose de tareas (WBS / EDT):</strong> dividir la funcionalidad o módulo en actividades manejables y medibles.</li>
+<li><strong>Análisis de dependencias:</strong> definir qué tareas preceden o suceden a otras (A → B). Es el orden técnico, no la prioridad del negocio.</li>
+<li><strong>Estimación de esfuerzo:</strong> las <strong>horas netas</strong> que requiere cada tarea, que no son lo mismo que su duración en tiempo calendario.</li>
+<li><strong>Camino crítico:</strong> la secuencia más larga de tareas dependientes <strong>sin holgura</strong>. Cualquier demora ahí retrasa la entrega final.</li>
+<li><strong>Asignación de responsables:</strong> distribuir los recursos humanos y técnicos.</li>
+<li><strong>Diagrama de Gantt:</strong> visualizar el cronograma con fechas, dependencias, recursos y solapamientos.</li>
+</ol>
+<p>Con el plan armado se busca <strong>paralelizar</strong> todo lo posible para acortar la duración global, con dos límites: la dependencia de datos y la restricción de recursos. Como marco, los modelos de proceso (ISO/IEC 12207, IEEE 1074) formalizan las actividades necesarias para llevar un producto a producción.</p>`,
+      k: ['Diseñar el método de ejecución|metodo de ejecucion', 'Previsibilidad|previsib', 'La tarea como actor principal|actor principal/desglose', 'WBS / EDT|wbs/edt', 'Dependencias|dependencia', 'Esfuerzo en horas netas|horas netas/esfuerzo', 'Camino crítico|camino critico', 'Sin holgura|holgura', 'Responsables|responsable', 'Diagrama de Gantt|gantt', 'Paralelizar|paralel'] },
+
+    { c: 'g', q: 'Explicar el Customer Journey y qué puntos de contacto pondrías para un e&#8209;commerce.',
+      a: `<p>El <strong>Customer Journey</strong> es el <strong>mapa del recorrido completo</strong> que hace el cliente en su relación con la marca, desde que la descubre hasta la posventa. Está compuesto por múltiples <strong>puntos de contacto (touchpoints)</strong>. Importa porque la CX es la <strong>percepción total</strong> que resulta de todas las interacciones: antes, durante y después de la compra.</p>
+<p>Para armarlo se define primero el <strong>buyer persona</strong> (a quién nos dirigimos), se identifican todos los puntos de contacto y se incluye una <strong>evaluación del cliente de 0 a 10</strong> en cada uno, lo que permite detectar fricciones y oportunidades de mejora.</p>
+<p>Para un e&#8209;commerce pondría:</p>
+<ol>
+<li><strong>Descubrimiento:</strong> búsqueda en Google y reseñas de terceros, un factor externo que la empresa no controla.</li>
+<li><strong>Sitio web:</strong> velocidad de carga, catálogo y stock real.</li>
+<li><strong>Carrito y proceso de compra:</strong> el formulario, donde conviene medir el esfuerzo con CES.</li>
+<li><strong>Pago y facturación:</strong> una mala facturación arruina una buena venta.</li>
+<li><strong>Logística y entrega:</strong> plazos y empaque.</li>
+<li><strong>Posventa y atención al cliente:</strong> consultas, cambios y reclamos.</li>
+</ol>
+<p>Cualquiera de esos puntos puede convertirse en una <strong>WOW Experience</strong>, por ejemplo un regalo inesperado en el empaque, y generar <strong>promotores</strong> (9&nbsp;o&nbsp;10) que recomiendan la marca. Un punto con nota baja genera <strong>detractores</strong>. Como el recorrido cruza áreas distintas, exige <strong>colaboración interfuncional</strong>: la atención al cliente es solo uno de los puntos, no toda la CX.</p>`,
+      k: ['Mapa del recorrido completo|recorrido/mapa', 'Puntos de contacto (touchpoints)|punto de contacto/puntos de contacto/touchpoint', 'Percepción total|percepcion', 'Buyer persona|buyer', 'Evaluación de 0 a 10|0 a 10/0-10/0 al 10', 'Posventa|posventa/postventa/post venta/post-venta', 'WOW Experience|wow', 'Promotores y detractores|promotor/detractor', 'Colaboración interfuncional|interfuncional/silos/silo/transversal'] },
+
+    { c: 'g', q: 'Qué particularidades tiene el ROE (Retorno de la Experiencia).',
+      a: `<p>El <strong>ROE (Return on Experience)</strong>, también llamado ROX, evalúa qué <strong>resultados concretos de negocio</strong> obtiene la empresa al <strong>invertir en mejorar la experiencia</strong> del cliente, <strong>frente al costo</strong> de esas acciones. Sus particularidades:</p>
+<ul>
+<li><strong>Mide retorno, no percepción.</strong> Los resultados que observa son <strong>recompras, retención</strong>, nuevas recomendaciones y aumento de ingresos.</li>
+<li><strong>Una buena nota no alcanza.</strong> Dar un regalo o tener una calificación de 9/10 sirve para medir la percepción, pero por sí solo no demuestra el ROE.</li>
+<li><strong>Exige vincular dos tipos de datos:</strong> los <strong>X&#8209;datos</strong> (métricas de experiencia) con los <strong>O&#8209;datos</strong> (resultados financieros y operativos, como gasto promedio o retención).</li>
+<li><strong>Se compara contra el costo.</strong> Es el retorno de una inversión, no el resultado de una encuesta.</li>
+<li><strong>Vuelve estratégica a la CX.</strong> Permite justificar en qué puntos de contacto conviene invertir: los que el cliente realmente valora.</li>
+</ul>
+<p>Ejemplo: después de mejorar la entrega, la nota de ese punto de contacto sube de 7 a 9 (X&#8209;dato). Hay ROE solo si además esos clientes recompran más o mejora la retención (O&#8209;datos), por un valor mayor que el costo de la mejora.</p>`,
+      k: ['Return on Experience|return on experience/retorno de la experiencia', 'Resultados concretos de negocio|resultado', 'Invertir en la experiencia|invertir/inversion/invierte/invirt', 'Frente al costo|costo', 'Recompra y retención|recompra/retencion', 'X&#8209;datos|x-dato/x dato/xdato/datos x', 'O&#8209;datos|o-dato/o dato/odato/datos o', 'Vincular percepción con resultados|vincul', 'Percepción no es retorno|percepcion'] }
+  ], [
+    { c: 'pg', q: 'Relación entre la gestión de riesgos y la experiencia del cliente (CX). Ejemplifique.',
+      a: `<p>La <strong>CX</strong> es la <strong>percepción total</strong> que el cliente tiene de la organización a lo largo de todas sus interacciones. La gestión de riesgos trabaja sobre <strong>potenciales problemas</strong>, antes de que ocurran. Se relacionan en tres sentidos.</p>
+<p><em>Un riesgo que se materializa es un problema en un punto de contacto.</em> Baja la evaluación de 0 a 10 de ese <strong>punto de contacto</strong> del <strong>Customer Journey</strong> y arruina la experiencia completa, aunque el resto haya salido bien.</p>
+<p><em>El impacto se multiplica.</em> En la <strong>era de los consumidores</strong> ese cliente se vuelve <strong>detractor</strong>, y un detractor difunde su mala experiencia mucho más que un promotor la buena. Por eso son <strong>riesgos de negocio</strong> de impacto alto: dañan la marca, la retención y el <strong>ROE</strong>.</p>
+<p><em>Gestionar riesgos es proteger la CX.</em> Se actúa de forma proactiva <strong>sobre la causa</strong>, se definen <strong>disparadores</strong> objetivos que avisen antes (la nota de un punto de contacto o el CES pueden cumplir ese rol) y se prepara un <strong>plan de contingencia</strong>. Si el problema ocurre igual, resolverlo de forma excepcional es <strong>hacer historias</strong> y puede terminar en una WOW Experience.</p>
+<p><em>Ejemplo.</em> <strong>Causa:</strong> el stock de la web no está sincronizado. <strong>Evento:</strong> un cliente compra un producto sin disponibilidad real. <strong>Consecuencia:</strong> cancelación, cliente detractor y reseñas negativas, además del impacto en el flujo de caja. Mitigación: umbral de stock mínimo. Contingencia: avisar de inmediato y compensar al cliente.</p>`,
+      k: ['Percepción total|percepcion', 'Potencial problema|potencial', 'Punto de contacto del Customer Journey|punto de contacto/puntos de contacto/touchpoint/journey', 'Era de los consumidores|consumidor', 'Detractores|detractor', 'Riesgo de negocio|de negocio', 'ROE|roe/retorno de la experiencia', 'Actuar sobre la causa|sobre la causa/sobre las causas', 'Disparador (trigger)|disparador/trigger', 'Plan de contingencia|contingencia', 'Hacer historias|hacer historia/wow'] },
+
+    { c: 'y', q: 'Diferencia entre esfuerzo y duración, y entre orden y prioridad. Dar 2 ejemplos.',
+      a: `<p>Las cuatro son propiedades de las <strong>tareas</strong> de un plan, y se confunden de a pares.</p>
+<p><em>Esfuerzo y duración</em> miden tiempo, pero no el mismo tiempo:</p>
+<ul>
+<li><strong>Esfuerzo:</strong> las <strong>horas netas de trabajo</strong> requeridas para completar la tarea.</li>
+<li><strong>Duración:</strong> el <strong>tiempo calendario</strong> transcurrido, es decir, <strong>fecha de fin menos fecha de inicio</strong>.</li>
+<li>Ejemplo 1: una tarea de 3 horas netas repartidas entre martes y jueves tiene un esfuerzo de 3 horas y una duración de 2 días.</li>
+</ul>
+<p><em>Orden y prioridad</em> dicen qué va antes, pero por motivos distintos:</p>
+<ul>
+<li><strong>Orden:</strong> la <strong>secuencia lógica obligatoria</strong>. Responde a la <strong>dependencia técnica y causal</strong>.</li>
+<li><strong>Prioridad:</strong> responde a <strong>decisiones estratégicas del negocio</strong>: qué conviene entregar antes.</li>
+<li>Ejemplo 2: no se puede probar código sin haberlo desarrollado (orden). Entregar primero el módulo que permite validar el mercado es una prioridad.</li>
+</ul>
+<p>En el plan, la estimación trabaja con el esfuerzo y el <strong>Gantt</strong> muestra las fechas. El orden define las <strong>dependencias</strong> y el camino crítico; la prioridad la fija el negocio, sin poder saltear el orden técnico.</p>`,
+      k: ['Horas netas de trabajo|netas', 'Tiempo calendario|calendario', 'Fecha de fin menos fecha de inicio|fecha', 'Secuencia lógica obligatoria|secuencia/obligatori', 'Dependencia técnica y causal|dependencia/tecnic/causal', 'Decisión estratégica del negocio|negocio/estrategic', 'Propiedades de la tarea|tarea', 'Gantt y camino crítico|gantt/camino critico'] },
+
+    { c: 'p', q: 'Cuál es el proceso formal de la gestión de riesgos y qué aporta el plan de contingencia.',
+      a: `<p>La gestión de riesgos existe porque hay <strong>incertidumbre</strong> y es <strong>proactiva</strong>: se planifica y se actúa antes de que el riesgo ocurra. El proceso formal tiene <strong>3 tareas</strong>, que se repiten de forma iterativa durante todo el proyecto.</p>
+<ol>
+<li><strong>Identificación:</strong> relevar los riesgos y clasificarlos en <strong>conjuntos disjuntos e independientes</strong>. Por naturaleza: <strong>genéricos</strong> (aplican a cualquier proyecto y se conservan como experiencia) y <strong>específicos</strong> (mueren con el proyecto). Por área y responsable: <strong>técnicos</strong> (ingeniero de software), <strong>de negocio</strong> (perfil comercial) y <strong>del proyecto</strong> (líder de proyecto).</li>
+<li><strong>Proyección:</strong> a cada riesgo se le asigna <strong>probabilidad de ocurrencia (P)</strong> e <strong>impacto (I)</strong>, del 1 al 5. Su producto, <strong>I × P</strong> (de 1 a 25), es la proyección del riesgo y permite priorizar los más críticos en la matriz.</li>
+<li><strong>Gestión:</strong> elegir una estrategia para los riesgos prioritarios: <strong>evitar</strong> (llevar P a cero), <strong>mitigar</strong> (actuar sobre la causa para bajar P o I), <strong>delegar</strong> (a un tercero externo), <strong>ignorar</strong> (asumirlo conscientemente) o <strong>escalar</strong> (a un nivel jerárquico superior dentro de la empresa).</li>
+</ol>
+<p>El <strong>plan de contingencia</strong> es un conjunto <strong>predefinido de pasos</strong> que se ejecuta <strong>única y exclusivamente cuando el riesgo ya se convirtió en un problema real</strong>, o durante un simulacro. Aporta la posibilidad de <strong>actuar de inmediato, sin improvisar</strong> en medio de la crisis. Se diferencia de la mitigación en que esta es <strong>preventiva</strong> y actúa antes, mientras que la contingencia es paliativa y se dispara después de que falló la prevención. Ejemplo: una rama de código ya testeada, lista para hacer rollback. El <strong>disparador</strong> es la métrica objetiva que avisa antes de que el evento se consume.</p>`,
+      k: ['Incertidumbre|incertidumbre', 'Proactiva|proactiv', 'Identificación|identifica', 'Conjuntos disjuntos|disjunt', 'Genéricos y específicos|generic/especific', 'Técnicos, de negocio y del proyecto|tecnic', 'Probabilidad e impacto (1 a 5)|probabilidad', 'I × P (1 a 25)|i x p/ixp/i × p/p x i/pxi/p × i/25/multiplic', 'Evitar|evita', 'Mitigar|mitig/reduc', 'Delegar|deleg/transfer', 'Ignorar|ignor/asum', 'Escalar|escalar/escalam', 'Pasos predefinidos|predefinid/pasos', 'Solo si el riesgo ya es un problema|problema real/se convirtio/se materializ/ya es un problema/ya ocurrio', 'Sin improvisar|improvis', 'Disparador (trigger)|disparador/trigger'] },
+
+    { c: 'p', q: 'Explicar la matriz de proyección de riesgos y qué riesgos pondrías en cada cuadrante para el desarrollo de un CRM.',
+      a: `<p>La <strong>matriz de proyección</strong> cruza dos variables <strong>independientes</strong>, puntuadas del <strong>1 al 5</strong>: la <strong>probabilidad de ocurrencia (P)</strong>, que indica qué tan probable es que el riesgo se convierta en problema, y el <strong>impacto (I)</strong>, que es la magnitud del daño si se materializa. Su producto, <strong>I × P</strong> (de 1 a 25), es la <strong>proyección del riesgo</strong> y sirve para <strong>priorizar</strong> dónde poner el esfuerzo de gestión.</p>
+<p>Para el desarrollo de un CRM ubicaría:</p>
+<ul>
+<li><strong>Probabilidad alta, impacto alto (crítico, foco prioritario):</strong> a causa de que la API del sistema de facturación no está documentada, puede fallar la integración, con la consecuencia de no salir a producción en la fecha comprometida. Estrategia: <strong>mitigar</strong> sobre la causa con una prueba de integración temprana, o <strong>evitar</strong> cambiando la arquitectura.</li>
+<li><strong>Probabilidad baja, impacto alto (catastrófico o atípico):</strong> caída total del centro de datos donde están los datos de los clientes. Estrategia: <strong>delegar o transferir</strong> (seguro, infraestructura distribuida) y tener un <strong>plan de contingencia</strong> con respaldos en la nube.</li>
+<li><strong>Probabilidad alta, impacto bajo (operativo menor):</strong> cortes breves de internet en la oficina que demoran al equipo un día puntual. Estrategia: mitigación simple (trabajo remoto, datos móviles) o <strong>asumir</strong>.</li>
+<li><strong>Probabilidad baja, impacto bajo (despreciable):</strong> una nevada en Buenos Aires que interrumpa el desarrollo. Estrategia: <strong>ignorar</strong>, porque no justifica tiempo ni presupuesto.</li>
+</ul>
+<p>El cuadrante de probabilidad e impacto altos es el principal insumo de la fase de gestión. En todos los casos el riesgo se define con <strong>causa, evento y consecuencia</strong>, y se trabaja sobre la causa.</p>`,
+      k: ['Probabilidad de ocurrencia (P)|probabilidad', 'Impacto (I)|impacto', 'Variables independientes|independiente', 'Escala del 1 al 5|1 al 5/1 a 5/1-5', 'I × P (1 a 25)|i x p/ixp/i × p/p x i/pxi/p × i/25/multiplic', 'Priorizar|prioriz/prioritari/prioridad', 'Crítico: foco prioritario|critico/foco', 'Mitigar o evitar|mitig/evita', 'Delegar o transferir|deleg/transfer', 'Plan de contingencia|contingencia', 'Ignorar o asumir|ignor/asum', 'Causa, evento y consecuencia|evento/c-e-c'] },
+
+    { c: 'g', q: 'Definir al menos 3 métricas de CX y explicar los dos enfoques de la CX digital.',
+      a: `<p>Las tres métricas principales de CX miden cosas distintas:</p>
+<ul>
+<li><strong>NPS (Net Promoter Score):</strong> mide cuánto <strong>defienden o recomiendan</strong> la marca los clientes. Distingue <strong>promotores</strong> (9&nbsp;o&nbsp;10), <strong>pasivos</strong> y <strong>detractores</strong>. Tiene limitaciones en transacciones puntuales y por diferencias culturales.</li>
+<li><strong>CES (Customer Effort Score):</strong> mide el <strong>esfuerzo del cliente</strong>, es decir, qué tan fácil o difícil le resulta <strong>completar una tarea</strong>. Es muy útil en canales digitales.</li>
+<li><strong>CSAT (Customer Satisfaction):</strong> mide la <strong>satisfacción puntual</strong> con un producto, un servicio o un punto de contacto específico.</li>
+</ul>
+<p>Las tres miden percepción. Para demostrar el ROE hay que vincularlas con resultados de negocio (O&#8209;datos).</p>
+<p>La CX digital se puede abordar con dos enfoques:</p>
+<ul>
+<li><strong>Táctico:</strong> es un <strong>diagnóstico operativo del canal</strong> digital, por ejemplo la velocidad de carga o las barreras en un formulario. Se mide con CES.</li>
+<li><strong>Estratégico:</strong> busca entender el <strong>rol del canal digital dentro de todo el recorrido</strong>, con mirada de <strong>omnicanalidad</strong>. Ejemplo: un cliente abandona el carrito online pero después compra en la tienda física gracias a lo que investigó en la web.</li>
+</ul>
+<p>Los clientes no piensan en canales separados: buscan resolver problemas. Por eso es vital comprender el rol de cada canal.</p>`,
+      k: ['NPS: recomendación|nps', 'Promotores, pasivos y detractores|pasivo/detractor/promotor', 'CES: esfuerzo del cliente|ces', 'CSAT: satisfacción puntual|csat', 'Punto de contacto|punto de contacto/puntos de contacto/touchpoint', 'Táctico: diagnóstico operativo|tactic', 'Estratégico: rol del canal en el recorrido|estrategic', 'Omnicanalidad|omnicanal', 'Recorrido completo|recorrido/journey'] }
+  ]];
+
+  /* ---------- Simulacro: armado de las hojas ---------- */
+  const VER = 'Ver Respuesta Modelo y Palabras Clave';
+  const hoja = (q, i, t) => `
+    <article class="q" data-id="t${t + 1}p${i + 1}">
+      <p class="hd"><b class="n">${i + 1}</b>${TIPOS[i]} ${[...q.c].map(c => `<span class="tag c-${c}">${CLASES[c]}</span>`).join(' ')}</p>
+      <h3>${q.q}</h3>
+      <textarea rows="7" aria-label="Tu respuesta a la pregunta ${i + 1} del tema ${t + 1}" placeholder="Redactá tu respuesta como en el parcial."></textarea>
+      <button class="btn" aria-expanded="false">${VER}</button>
+      <div class="ans" hidden>${q.a}
+        <p class="score"></p>
+        <ul class="chips">${q.k.map(k => k.split('|')).map(([label, stems]) => `<li data-s="${stems}">${label}</li>`).join('')}</ul>
+      </div>
+    </article>`;
+  const exam = $('#exam');
+  exam.innerHTML = TEMAS.map((qs, t) => `<div class="tema" data-tema="${t + 1}"${t ? ' hidden' : ''}>${qs.map((q, i) => hoja(q, i, t)).join('')}</div>`).join('');
+
+  /* ---------- Borradores guardados en el navegador ---------- */
+  const store = {
+    get(k) { try { return localStorage.getItem('gads2:' + k) || ''; } catch { return ''; } },
+    set(k, v) { try { v ? localStorage.setItem('gads2:' + k, v) : localStorage.removeItem('gads2:' + k); } catch {} }
+  };
+  $$('.q').forEach(q => $('textarea', q).value = store.get(q.dataset.id));
+  try { localStorage.setItem('gads2:ok', '1'); localStorage.removeItem('gads2:ok'); }
+  catch { $('#p-simulacro > .cap').textContent = 'Este navegador no deja guardar las respuestas: copialas antes de cerrar la página.'; }
+
+  /* ---------- Chequeo de palabras clave en la respuesta ---------- */
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // Raíces cortas (siglas) se buscan como palabra entera; las largas, como comienzo de palabra.
+  const usa = (txt, stems) => stems.split('/').some(s => new RegExp('(^|[^a-z0-9])' + s + (s.length < 5 ? '($|[^a-z0-9])' : '')).test(txt));
+  function check(q) {
+    const txt = norm($('textarea', q).value).trim(), chips = $$('.chips li', q);
+    const n = chips.filter(li => (li.className = !txt ? '' : usa(txt, li.dataset.s) ? 'hit' : 'miss') === 'hit').length;
+    $('.score', q).textContent = txt ? `Usaste ${n} de ${chips.length} palabras clave. Las punteadas son las que te faltaron.` : 'Palabras clave que suman puntos:';
+  }
+
+  /* ---------- Simulacro: interacción ---------- */
+  exam.addEventListener('click', e => {
+    const b = e.target.closest('.btn');
+    if (!b) return;
+    const q = b.closest('.q'), ans = $('.ans', q), abrir = ans.hidden;
+    ans.hidden = !abrir;
+    b.setAttribute('aria-expanded', abrir);
+    b.textContent = abrir ? 'Ocultar respuesta modelo' : VER;
+    if (abrir) check(q);
+  });
+  exam.addEventListener('input', e => {
+    const q = e.target.closest('.q');
+    store.set(q.dataset.id, e.target.value);
+    if (!$('.ans', q).hidden) check(q);
+  });
+
+  const temas = $$('[data-go]');
+  temas.forEach(b => b.addEventListener('click', () => {
+    temas.forEach(x => x.setAttribute('aria-pressed', x === b));
+    $$('.tema').forEach(t => t.hidden = t.dataset.tema !== b.dataset.go);
+  }));
+
+  const reset = $('#reset'), BORRAR = reset.textContent;
+  let espera = 0;
+  reset.addEventListener('click', () => {
+    clearTimeout(espera);
+    if (reset.textContent === BORRAR) {            // primer toque: pide confirmación
+      reset.textContent = '¿Seguro? Tocá de nuevo para borrar';
+      espera = setTimeout(() => reset.textContent = BORRAR, 4000);
+      return;
+    }
+    reset.textContent = BORRAR;                    // segundo toque: borra el tema visible
+    $$('.tema:not([hidden]) .q').forEach(q => {
+      $('textarea', q).value = '';
+      store.set(q.dataset.id, '');
+      if (!$('.ans', q).hidden) $('.btn', q).click();
+    });
+  });
+})();
+</script>
+</body>
+</html>

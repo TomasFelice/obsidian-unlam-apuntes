@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Autómatas y gramática/Clases/AG - Clase 9.md",
+                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AG - Clase 9"
+              "title": "GADS - Clase 8"
             }
           }
         ]
@@ -168,22 +168,12 @@
             }
           },
           {
-            "id": "44772a0d0d893640",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "bff56e93b6b4be0a",
             "type": "leaf",
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Revisión integral de apuntes.md"
+                "file": "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md"
               },
               "icon": "lucide-info",
               "title": "Propiedades del archivo"
@@ -198,6 +188,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "easy-git-sync:Sync with GitHub": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
@@ -209,13 +200,30 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "44772a0d0d893640",
+  "active": "f2bdf9200d73519f",
   "lastOpenFiles": [
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 7.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 6.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 5.md",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 8.md",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_ guía de estudio del 2° parcial.html",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Resumen Parcial 2.docx.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_Resumen_2do_parcial.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/TP GADS Integrado.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS--06-Planificacion.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Sin confirmar 182716.crdownload",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---Planificacion---Lectura.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Sin confirmar 273897.crdownload",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---06-Planificacio--n.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Sin confirmar 151740.crdownload",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Customer-Journey.jpeg",
+    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 9.md",
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
+    "Autómatas y gramática/Clases/AG - Clase 9.md",
     "Sistemas Operativos Avanzados.md",
     "Autómatas y gramática/Clases/AG - Clase 8.md",
     "Autómatas y gramática/Clases/AG - Clase 7.md",
     "Autómatas y gramática/Clases/AG - Clase 6.md",
-    "Autómatas y gramática/Clases/AG - Clase 9.md",
     "Autómatas y gramática/Clases/AG - Clase 5.md",
     "Autómatas y gramática/Clases/AG - Clase 4.md",
     "Autómatas y gramática/Parciales/AG - Parcial 2 - Práctica adicional.md",
@@ -226,16 +234,6 @@
     "Pasted image 20261113104617.png",
     "Autómatas y gramática/Parciales/AG - Parcial 2 - Ejercicio 7 - AP corregido.png",
     "Pasted image 20261113103839.png",
-    "Autómatas y gramática/Material de clase/31-Unidad-3---A-LenguajeTipo2_3.pdf",
-    "Autómatas y gramática/Material de clase/31-Unidad-3---A-LenguajeTipo2_3.pdf.crdownload",
-    "Autómatas y gramática/Material de clase/3A-Arquitectura_Sintactica_Tipo_2_(5).pdf",
-    "Autómatas y gramática/Material de clase/3A-Arquitectura_Sintactica_Tipo_2_(5).pdf.crdownload",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_gic_1.pdf",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_gic_1.pdf.crdownload",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_foro2.pdf",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_foro2.pdf.crdownload",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_cyk_1.pdf",
-    "Autómatas y gramática/Material de clase/presentacion_practica3a_cyk_1.pdf.crdownload",
     "Autómatas y gramática/Parciales/2do Parcial/20-06-25 Parte 1.webp",
     "Autómatas y gramática/Parciales/2do Parcial/20-06-25 Tema 1 Parte 1.webp",
     "Autómatas y gramática/Parciales/2do Parcial/9da427cf-4f6a-4832-b957-2305580fa79d.webp",
@@ -247,15 +245,8 @@
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
     "Pasted image 20261110154457.png",
-    "Sistemas Operativos Avanzados/Parciales/Parcial.webp",
     "Sistemas Operativos Avanzados/Parciales/Preguntas de parcial - Otra comisión.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
-    "Gestión aplicada al desarrollo de software 1/Clases/GADS - Clase 9.md",
-    "Gestión aplicada al desarrollo de software 1/Gestión aplicada al desarrollo de software 1.md"
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md"
   ]
 }
