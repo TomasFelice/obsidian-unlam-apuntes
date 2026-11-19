@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---06-Planificacio--n.pdf"
+                "file": "Gestión aplicada al desarrollo de software 1/Material de clase/Resumen Parcial 2.docx.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "GADS---06-Planificacio--n"
+              "title": "Resumen Parcial 2.docx"
             }
           }
         ]
@@ -35,7 +35,7 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false,
+            "autoReveal": true,
             "showSearch": false,
             "searchQuery": ""
           },
@@ -173,6 +173,7 @@
   "active": "f197884be0ce9045",
   "lastOpenFiles": [
     "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_Resumen_2do_parcial.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---06-Planificacio--n.pdf",
     "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_repaso_final_2do_parcial.pdf",
     "Autómatas y gramática/Clases/AG - Repaso Parcial 2.md",
     "Gestión aplicada al desarrollo de software 1/Material de clase/TP GADS Integrado.pdf",
