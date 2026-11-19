@@ -11,14 +11,12 @@
             "id": "f197884be0ce9045",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.md",
-                "mode": "source",
-                "source": false
+                "file": "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_repaso_final_2do_parcial.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Parcial-1c2026"
+              "icon": "lucide-file-text",
+              "title": "GADS_repaso_final_2do_parcial"
             }
           }
         ]
@@ -117,6 +115,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Autómatas y gramática/Parciales/AG - Parcial 2 - Práctica adicional.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -173,6 +172,26 @@
   },
   "active": "f197884be0ce9045",
   "lastOpenFiles": [
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_Resumen_2do_parcial.pdf",
+    "Autómatas y gramática/Clases/AG - Repaso Parcial 2.md",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/TP GADS Integrado.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---Customer-Experience.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS--06-Planificacion.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Resumen Parcial 2.docx.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Resolucion-Segundo-Parcial-1C2026.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Parcial 2 - 1C2026.webp",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Planificacion-de-Proyectos-Informaticos.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_repaso_final_2do_parcial.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS_ guía de estudio del 2° parcial.html",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/GADS---Planificacion---Lectura.pdf",
+    "Gestión aplicada al desarrollo de software 1/Material de clase/Customer-Journey.jpeg",
+    "Autómatas y gramática/Parciales/AG - Parcial 2 - Práctica adicional.md",
+    "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.md",
+    "Pasted image 20261113120205.png",
+    "Pasted image 20261113103839.png",
+    "Pasted image 20261113113528.png",
+    "Pasted image 20261113104617.png",
+    "Autómatas y gramática/Parciales/AG - Parcial 2 - Ejercicio 7 - AP corregido.png",
     "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.webp",
     "Sistemas Operativos Avanzados/Parciales/Parcial.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 10.md",
@@ -180,43 +199,23 @@
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 8.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 6.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 7.md",
-    "Sistemas Operativos Avanzados/Parciales/Parcial-1c2026.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 9.md",
     "Sistemas Operativos Avanzados.md",
     "Álgebra y Geometría Analítica 2/Álgebra y Geometría Analítica 2.md",
-    "Álgebra y Geometría Analítica 2",
     "Álgebra y Geometría Analítica 1/Álgebra y Geometría Analítica 1.md",
-    "Álgebra y Geometría Analítica 1",
     "Virtualización de Hardware/Virtualización de Hardware.md",
-    "Virtualización de Hardware",
     "Tópicos de programación/Tópicos de programación.md",
-    "Tópicos de programación",
     "Templates/Examen.md",
     "Templates/Clase.md",
-    "Templates",
     "Taller de integracion/Taller de integracion.md",
-    "Taller de integracion",
     "Sistemas operativos/Sistemas operativos.md",
-    "Sistemas operativos",
     "Sistemas de Numeración/Sistemas de Numeración.md",
-    "Sistemas de Numeración",
     "Sistemas Operativos Avanzados/Sistemas Operativos Avanzados.md",
     "Sistemas Operativos Avanzados/Parciales/SOA - Circuito de práctica.svg",
-    "Sistemas Operativos Avanzados/Parciales/SOA - Circuito de práctica - Alimentación.svg",
-    "Sistemas Operativos Avanzados/Parciales/7. [Parcial 1][][][][][].pdf",
     "Sistemas Operativos Avanzados/Parciales/Preguntas de parcial - Otra comisión.md",
-    "Sistemas Operativos Avanzados/Parciales/5. [Parcial 1][2C2021][3900][][Resuelto][].pdf",
-    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion watchOS.png",
-    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - Sincronizacion Wear OS.png",
-    "Sistemas Operativos Avanzados/Material de clase/Imagenes Wearables/SOA10 - APIs Wear OS.png",
-    "Pasted image 20261102190229.png",
-    "Pasted image 20261102190136.png",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 5.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 2.md",
     "Sistemas Operativos Avanzados/Clases/SOA - Clase 3.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md",
-    "Sistemas Operativos Avanzados/Clases/SOA - Clase 1.md",
-    "Seguridad de la información/Seguridad de la información.md",
-    "Pasted image 20261110154457.png"
+    "Sistemas Operativos Avanzados/Clases/SOA - Clase 4.md"
   ]
 }
